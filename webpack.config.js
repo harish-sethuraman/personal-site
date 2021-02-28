@@ -11,7 +11,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 module.exports = {
   mode: "production",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "docs"),
     // filename: '[name].[contenthash].js',
   },
   module: {
@@ -41,10 +41,9 @@ module.exports = {
     //   chunkFilename: '[id].css',
     // }),
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: [path.join(__dirname, "dist/**/*")],
+      cleanOnceBeforeBuildPatterns: [path.join(__dirname, "docs/**/*")],
     }),
     new htmlWebpackPlugin({
-      hash: true,
       template: "./src/public/index.html",
     }),
     new WorkboxPlugin.GenerateSW({

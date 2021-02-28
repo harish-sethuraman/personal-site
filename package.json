@@ -1,5 +1,4 @@
 {
-  "homepage": "http://harish-sethuraman.github.io/resume",
   "name": "strek-portfolio",
   "version": "1.0.0",
   "description": "This is the portfolio of Harish Kumar.S.S",
@@ -8,8 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve",
     "build": "webpack build",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d dist"
   },
   "author": "Harish Kumar.S.S",
   "license": "ISC",
