@@ -12,8 +12,8 @@ const ThemeSelector = () => {
 
   useEffect(() => {
     const storedData = getItem("theme");
-    storedData !== undefined ? changeTheme(storedData): changeTheme(theme);
-    storedData !== undefined ? updateItem("theme", storedData) : updateItem('theme',theme)
+    storedData !== null ? changeTheme(storedData) : changeTheme("light");
+    storedData !== null ? updateItem("theme", storedData) : updateItem('theme', "light")
   }, []);
 
   return (
