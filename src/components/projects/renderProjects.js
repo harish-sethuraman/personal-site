@@ -1,13 +1,14 @@
-import React from "react";
-import Tetris from "../../tetris/tetris";
-import LazyLoad from "react-lazy-load";
-import ImageLoader from "../image-loader";
+import React from 'react';
+import LazyLoad from 'react-lazy-load';
+import Tetris from '../../tetris/tetris';
+import ImageLoader from '../image-loader';
+
 const RenderProjects = (name) => {
   switch (name) {
-    case "Readme Components":
+    case 'Readme Components':
       return (
         <center>
-          <LazyLoad  debounce={false} offset={10000}>
+          <LazyLoad debounce={false} offset={10000}>
             <ImageLoader
               src="https://readme-components.vercel.app/api?component=experience&amp;company=freshworks&amp;role=software%20Developer%20Intern&amp;duration=7m&amp;location=chennai&amp;fill=93c4fc"
               alt="image"
@@ -37,35 +38,35 @@ const RenderProjects = (name) => {
           </LazyLoad>
         </center>
       );
-    case "TETRIS":
+    case 'Tetris':
       return (
         <Tetris
           tetromino={[
             {
-              type: "accordion",
+              type: 'accordion',
               tetromino: [
                 {
-                  type: "accordion-content",
-                  title: "Did you know",
+                  type: 'accordion-content',
+                  title: 'Did you know',
                   content:
-                    "Tetris is built using react and bundled using webpack",
+                    'Tetris is built using react and bundled using webpack',
                 },
                 {
-                  type: "accordion-content",
-                  title: "This is a readymade TETRIS component",
-                  content: "Probably visit my github to know more",
+                  type: 'accordion-content',
+                  title: 'This is a readymade TETRIS component',
+                  content: 'Probably visit my github to know more',
                 },
                 {
-                  type: "accordion-content",
-                  title: "created using JSON",
-                  content: "You can contribute too.",
+                  type: 'accordion-content',
+                  title: 'created using JSON',
+                  content: 'You can contribute too.',
                 },
               ],
             },
           ]}
         />
       );
-    case "WEFMS":
+    case 'WEFMS':
       return (
         <center>
           <LazyLoad width={200} height={400} debounce={false} offset={10000}>
@@ -77,7 +78,7 @@ const RenderProjects = (name) => {
           </LazyLoad>
         </center>
       );
-    case "KLN Vidyalaya":
+    case 'KLN Vidyalaya':
       return (
         <center>
           <LazyLoad width={200} height={400} debounce={false} offset={10000}>
@@ -89,6 +90,8 @@ const RenderProjects = (name) => {
           </LazyLoad>
         </center>
       );
+    default:
+      return <h1>Not found</h1>;
   }
 };
 

@@ -1,28 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { setItem, updateItem, getItem } from "../../utils/localStorage";
+import React, { useEffect, useState } from 'react';
+import { updateItem, getItem } from '../../utils/localStorage';
 
 const ThemeSelector = () => {
-  const [theme, toggleTheme] = useState("light");
+  const [theme, toggleTheme] = useState('light');
 
   const changeTheme = (optionalTheme) => {
-    toggleTheme(optionalTheme)
-    updateItem("theme", optionalTheme);
-    document.getElementsByTagName("body")[0].classList = optionalTheme;
+    toggleTheme(optionalTheme);
+    updateItem('theme', optionalTheme);
+    document.getElementsByTagName('body')[0].classList = optionalTheme;
   };
 
   useEffect(() => {
-    const storedData = getItem("theme");
-    storedData !== null ? changeTheme(storedData) : changeTheme("light");
-    storedData !== null ? updateItem("theme", storedData) : updateItem('theme', "light")
+    const storedData = getItem('theme');
+    storedData !== null ? changeTheme(storedData) : changeTheme('light');
+    storedData !== null ? updateItem('theme', storedData) : updateItem('theme', 'light');
   }, []);
 
   return (
     <div className="theme-selector">
       <i
-        className={`theme ${theme == "light" ? "fa fa-moon-o" : "fa fa-sun-o" }`}
-        style={{ zIndex: "100" }}
-        onClick={() => changeTheme(theme === "light" ? "dark" : "light")}
-      ></i>
+        className={`theme ${theme === 'light' ? 'fa fa-moon-o' : 'fa fa-sun-o'}`}
+        style={{ zIndex: '100' }}
+        onClick={() => changeTheme(theme === 'light' ? 'dark' : 'light')}
+      />
     </div>
   );
 };
@@ -33,9 +33,8 @@ const Navbar = () => {
     <header className="navbar-header fixed-top">
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-dark">
-          <a className="navbar-brand" href="index-3-dark.html"></a>
           <button
-            onClick={() => toggleNav((navStatus) => !navStatus)}
+            onClick={() => toggleNav((oldNavStatus) => !oldNavStatus)}
             aria-controls="navbarNavDropdown"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -44,10 +43,10 @@ const Navbar = () => {
             data-toggle="collapse"
             type="button"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon" />
           </button>
           <div
-            className={`collapse navbar-collapse ${navStatus && "show"}`}
+            className={`collapse navbar-collapse ${navStatus && 'show'}`}
             id="navbarNavDropdown"
           >
             <ul className="navbar-nav ml-auto scrollspy">

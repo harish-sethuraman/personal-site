@@ -1,59 +1,57 @@
-import React, { useEffect } from "react";
-import Harish from "../../assets/hi.webp";
-import lax from "lax.js";
+import React, { useEffect } from 'react';
+import lax from 'lax.js';
 import LazyLoad from 'react-lazy-load';
-import ImageLoader from '../image-loader'
+import Harish from '../../assets/hi.webp';
+import ImageLoader from '../image-loader';
+
 const HeroSection = () => {
   useEffect(() => {
     // Setup lax
     lax.init();
 
-    lax.addDriver("scrollY", function () {
-      return window.scrollY;
-    });
+    lax.addDriver('scrollY', () => window.scrollY);
 
-
-    lax.addElements(".triangle-left-md ", {
+    lax.addElements('.triangle-left-md ', {
       scrollY: {
         translateX: [
-          ["elCenterY +200", "elOutY +500"],
-          [0, "screenHeight * 2"],
+          ['elCenterY +200', 'elOutY +500'],
+          [0, 'screenHeight * 2'],
         ],
       },
     });
 
-        lax.addElements(".project", {
+    lax.addElements('.project', {
       scrollY: {
-        translateX: [["elCenterY + 200", "elOutY + 500 "],
-        [0, "screenHeight / -3"]]
-      }
+        translateX: [['elCenterY + 200', 'elOutY + 500 '],
+          [0, 'screenHeight / -3']],
+      },
     });
-    
-    lax.addElements(".strek-avatar", {
+
+    lax.addElements('.strek-avatar', {
       scrollY: {
         translateX: [
-          ["elCenterY + 200", "elOutY + 500 "],
-          [0, "screenHeight / -3"],
+          ['elCenterY + 200', 'elOutY + 500 '],
+          [0, 'screenHeight / -3'],
         ],
       },
     });
     // Add your elements
-    lax.addElements(".bubble", {
+    lax.addElements('.bubble', {
       scrollY: {
         translateY: [
-          ["screenHeight/3", "screenHeight"],
-          ["Math.random()*screenHeight * 2.5", "Math.random()*screenWidth*2"],
+          ['screenHeight/3', 'screenHeight'],
+          ['Math.random()*screenHeight * 2.5', 'Math.random()*screenWidth*2'],
         ],
         opacity: [
-          ["screenHeight/4", "screenHeight/2"],
+          ['screenHeight/4', 'screenHeight/2'],
           [1, 0],
         ],
-        scale: [[0], ["(Math.random()*0.8)+0.2"]],
+        scale: [[0], ['(Math.random()*0.8)+0.2']],
         transform: [
           [0, 4000],
-          [0, "Math.random() * 1000"],
+          [0, 'Math.random() * 1000'],
           {
-            cssFn: function (val) {
+            cssFn(val) {
               return `rotateX(${val % 360}deg)`;
             },
           },
@@ -64,16 +62,16 @@ const HeroSection = () => {
         ],
       },
     });
-    lax.addElements(".rocket", {
+    lax.addElements('.rocket', {
       scrollY: {
-        translateX: [[0, "elOutY"], [0, "screenWidth-150"]],
+        translateX: [[0, 'elOutY'], [0, 'screenWidth-150']],
         rotate: [
           [0],
           [45],
         ],
       },
     });
-    lax.addElements(".mars", {
+    lax.addElements('.mars', {
       scrollY: {
         rotate: [
           [0, 1000],
@@ -100,7 +98,7 @@ const HeroSection = () => {
           </center>
 
           <h1 className="animate__animated animate__zoomIn mb-2 mt-0">
-            Hey there im Harish Kumar
+            Hey 👋 ! I’m Harish Kumar
           </h1>
 
           <div className="slidingVertical mb-2">
@@ -113,19 +111,19 @@ const HeroSection = () => {
 
           <ul className="social-icons  list-inline mb-0 mt-4">
             <li className="list-inline-item">
-              <a href="github.com/harish-sethuraman">
-                <i className="fa fa-github"></i>
+              <a href="https://github.com/harish-sethuraman">
+                <i className="fa fa-github" />
               </a>
             </li>
             <li className="list-inline-item">
-              <a href="#">
-                <i className="fa fa-stack-overflow"></i>
+              <a href="https://stackoverflow.com/users/8780399/strek">
+                <i className="fa fa-stack-overflow" />
               </a>
             </li>
           </ul>
 
           <div className="mt-4">
-            <a href="#contact" className="btn btn-default">
+            <a href="/projects" className="btn btn-default">
               Hire me
             </a>
           </div>
@@ -135,7 +133,7 @@ const HeroSection = () => {
           <a href="#about" className="mouse-wrapper">
             <span>Scroll Down</span>
             <span className="mouse">
-              <span className="wheel"></span>
+              <span className="wheel" />
             </span>
           </a>
         </div>

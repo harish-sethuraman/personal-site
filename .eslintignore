@@ -1,0 +1,4 @@
+docs/
+dist/
+src/tetris/
+src/service-worker.js

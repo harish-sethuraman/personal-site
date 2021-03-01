@@ -32,29 +32,29 @@
     ],
     "projects": [
         {
-            "name": "TETRIS",
-            "description": "Tetris is a javascript package bundled with webpack and written in react<br/>Singular component that can generate a website with minimaleffort. Contains multiple ui components that can be grouped together in numerous combinations.",
-            "link": "https://www.github.com/harish-sethuraman/readme-components",
-            "showcase": "<center><img src='https://readme-components.vercel.app/api?component=linearprogress&amp;skill=REACT&amp;value=60&amp;design=candy&amp;fill=ff69b4' alt='image> <img src='https://readme-components.vercel.app/api?component=experience&amp;company=freshworks&amp;role=software%20Developer%20Intern&amp;duration=7m&amp;location=chennai&amp;fill=93c4fc' alt='image'> <img src='https://readme-components.vercel.app/api?component=logo&amp;fill=black&amp;logo=webpack&amp;svgfill=8ed5fa' alt='image'><img src='https://readme-components.vercel.app/api?component=logo&amp;fill=black&amp;logo=react&amp;animation=spin&amp;svgfill=15d8fe' alt='image'><img width='95%' src='https://readme-components.vercel.app/api?component=stackoverflow&amp;stackoverflowid=8780399&amp;textfill=black&amp;fill=93c4fc&amp;textfill=white' alt='image'></center>"
+          "name": "Tetris",
+          "description": "Tetris is a javascript package bundled with webpack and written in react<br/>Singular component that can generate a website with minimaleffort. Contains multiple ui components that can be grouped together in numerous combinations.",
+          "link": "/projects",
+          "showcase": "<center><img src='https://readme-components.vercel.app/api?component=linearprogress&amp;skill=REACT&amp;value=60&amp;design=candy&amp;fill=ff69b4' alt='image> <img src='https://readme-components.vercel.app/api?component=experience&amp;company=freshworks&amp;role=software%20Developer%20Intern&amp;duration=7m&amp;location=chennai&amp;fill=93c4fc' alt='image'> <img src='https://readme-components.vercel.app/api?component=logo&amp;fill=black&amp;logo=webpack&amp;svgfill=8ed5fa' alt='image'><img src='https://readme-components.vercel.app/api?component=logo&amp;fill=black&amp;logo=react&amp;animation=spin&amp;svgfill=15d8fe' alt='image'><img width='95%' src='https://readme-components.vercel.app/api?component=stackoverflow&amp;stackoverflowid=8780399&amp;textfill=black&amp;fill=93c4fc&amp;textfill=white' alt='image'></center>"
         },
         {
-            "name": "Readme Components",
-            "description": "Dynamically generated components for markdown files<br/>An API written in Javascript for generating numerous components that can be used in markdown files",
-            "link": "https://www.github.com/harish-sethuraman/readme-components",
-            "showcase": "<center> <img src='https://readme-components.vercel.app/api?component=experience&amp;company=freshworks&amp;role=software%20Developer%20Intern&amp;duration=7m&amp;location=chennai&amp;fill=93c4fc' alt='image'> <img src='https://readme-components.vercel.app/api?component=logo&amp;fill=black&amp;logo=webpack&amp;svgfill=8ed5fa' alt='image'><img src='https://readme-components.vercel.app/api?component=logo&amp;fill=black&amp;logo=react&amp;animation=spin&amp;svgfill=15d8fe' alt='image'><img width='95%' src='https://readme-components.vercel.app/api?component=stackoverflow&amp;stackoverflowid=8780399&amp;textfill=black&amp;fill=93c4fc&amp;textfill=white' alt='image'></center>"
+          "name": "Readme Components",
+          "description": "Dynamically generated components for markdown files<br/>An API written in Javascript for generating numerous components that can be used in markdown files",
+          "link": "/projects",
+          "showcase": "<center> <img src='https://readme-components.vercel.app/api?component=experience&amp;company=freshworks&amp;role=software%20Developer%20Intern&amp;duration=7m&amp;location=chennai&amp;fill=93c4fc' alt='image'> <img src='https://readme-components.vercel.app/api?component=logo&amp;fill=black&amp;logo=webpack&amp;svgfill=8ed5fa' alt='image'><img src='https://readme-components.vercel.app/api?component=logo&amp;fill=black&amp;logo=react&amp;animation=spin&amp;svgfill=15d8fe' alt='image'><img width='95%' src='https://readme-components.vercel.app/api?component=stackoverflow&amp;stackoverflowid=8780399&amp;textfill=black&amp;fill=93c4fc&amp;textfill=white' alt='image'></center>"
         },
        
         {
-            "name": "WEFMS",
-            "description": "WEFMS stands for Wireless Engines Fuel Monitoring System. This motive of this project is to maintain the engines that are located remotely anywhere.<br/>Turn on or Turn off the generators from any where around the world using the Web-App.",
-            "link": "https://www.github.com/harish-sethuraman/readme-components",
-            "showcase": "<center><img src='https://harishkumar-s-s.firebaseapp.com/assets/img/svgs/wefms.svg' style='height : 400px; width : 200px' class='card-img-top' alt='image'></center>"
+          "name": "WEFMS",
+          "description": "WEFMS stands for Wireless Engine Fuel Monitoring System. The motive of this project is to maintain the generators that are located remotely anywhere.<br/>Turn on or Turn off the generators from any where around the world using the Web-App.",
+          "link": "/proje",
+          "showcase": "<center><img src='https://harishkumar-s-s.firebaseapp.com/assets/img/svgs/wefms.svg' style='height : 400px; width : 200px' class='card-img-top' alt='image'></center>"
         },
         {
-            "name": "KLN Vidyalaya",
-            "description": "KLN Vidyalaya is an school present at Madurai.<br/>The website for that insititute is responsive and is updated frequently. It has a large variety of UI elements such as carousel, timelines and many more.",
-            "link": "https://www.github.com/harish-sethuraman/readme-components",
-            "showcase": "<center><img src='https://harishkumar-s-s.firebaseapp.com/assets/img/svgs/vidyalaya.svg' style='height : 400px; width : 200px' class='card-img-top' alt='image'></center>"
+          "name": "KLN Vidyalaya",
+          "description": "KLN Vidyalaya is an school present at Madurai.<br/>The website for that insititute is responsive and is updated frequently. It has a large variety of UI elements such as carousel, timelines and many more.",
+          "link": "/projects",
+          "showcase": "<center><img src='https://harishkumar-s-s.firebaseapp.com/assets/img/svgs/vidyalaya.svg' style='height : 400px; width : 200px' class='card-img-top' alt='image'></center>"
         }
     ]
 }

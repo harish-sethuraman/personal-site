@@ -1,15 +1,13 @@
-import ReactDOM from "react-dom";
-import React from "react";
-import App from "./components/app";
-import "./css/style.css";
-import "./css/animate.css";
+import ReactDOM from 'react-dom';
+import React from 'react';
+import App from './components/app';
+import './css/style.css';
+import './css/animate.css';
 
-const Index = () => {
-  return (
-    <>
-      <App />
-    </>
-  );
-};
+const Index = () => (
+  <>
+    <App />
+  </>
+);
 
-ReactDOM.render(<Index />, document.getElementsByTagName("body")[0]);
+ReactDOM.render(<Index />, document.getElementsByTagName('body')[0]);

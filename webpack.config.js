@@ -1,37 +1,36 @@
-const htmlWebpackPlugin = require("html-webpack-plugin");
-const WorkboxPlugin = require("workbox-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const path = require("path");
+const htmlWebpackPlugin = require('html-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const TerserPlugin = require("terser-webpack-plugin");
-
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  mode: "production",
+  mode: 'development',
   output: {
-    path: path.resolve(__dirname, "docs"),
+    path: path.resolve(__dirname, 'dist'),
     // filename: '[name].[contenthash].js',
   },
   module: {
     rules: [
       {
         test: /\.(jpeg|jpg|png|gif|svg|webp|json)$/i,
-        loader: "file-loader",
+        loader: 'file-loader',
       },
       {
         test: /\.css$/i,
         exclude: /node_modules/,
         use: [
           // MiniCssExtractPlugin.loader,
-          "style-loader",
-           "css-loader"],
+          'style-loader',
+          'css-loader'],
       },
       {
         test: /\.js|json$/,
         exclude: /node_modules/,
-        use: ["babel-loader"],
+        use: ['babel-loader'],
       },
     ],
   },
@@ -41,10 +40,10 @@ module.exports = {
     //   chunkFilename: '[id].css',
     // }),
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: [path.join(__dirname, "docs/**/*")],
+      cleanOnceBeforeBuildPatterns: [path.join(__dirname, 'docs/**/*')],
     }),
     new htmlWebpackPlugin({
-      template: "./src/public/index.html",
+      template: './src/public/index.html',
     }),
     new WorkboxPlugin.GenerateSW({
       exclude: [/\.(?:png|jpg|jpeg|svg)$/],
@@ -63,14 +62,14 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        "src/public/img",
-        "src/public/manifest.json",
-        { from: "datas/data.json", to: "datas/" },
+        'src/public/img',
+        'src/public/manifest.json',
+        { from: 'datas/data.json', to: 'datas/' },
       ],
     }),
   ],
   optimization: {
-    minimize : true,
+    minimize: true,
     minimizer: [
       new CssMinimizerPlugin(),
       new TerserPlugin(),

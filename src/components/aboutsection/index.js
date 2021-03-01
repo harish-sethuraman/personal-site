@@ -1,13 +1,16 @@
-import React, { lazy, Suspense, useEffect, useState } from "react";
-import Harish from "../../assets/working.webp";
-import Tetris from "../../tetris/tetris";
-const Facts = lazy(() => import("../facts"));
-import lax from "lax.js";
-import LazyLoad from "react-lazy-load";
+import React, {
+  lazy, useState,
+} from 'react';
+import LazyLoad from 'react-lazy-load';
+import Harish from '../../assets/working.webp';
+import Tetris from '../../tetris/tetris';
 import ImageLoader from '../image-loader';
+/* eslint-disable no-unused-vars */
+const Facts = lazy(() => import('../facts'));
 
 const AboutSection = ({ myDetails }) => {
   // const [myDetails, setMyDetails] = useState({ description: "" });
+/* eslint-disable no-unused-vars */
   const [views, setViews] = useState(0);
 
   // const fetchViews = () => {
@@ -26,13 +29,13 @@ const AboutSection = ({ myDetails }) => {
   //   fetchViews();
   // }, []);
   return (
-    <section id="about" >
+    <section id="about">
       <div className="container">
         <div
           className="spacer"
           data-height="60"
-          style={{ height: "60px" }}
-        ></div>
+          style={{ height: '60px' }}
+        />
 
         <div className="row">
           <div className="col-md-3">
@@ -47,8 +50,8 @@ const AboutSection = ({ myDetails }) => {
             <div
               className="spacer d-md-none d-lg-none"
               data-height="30"
-              style={{ height: "30px" }}
-            ></div>
+              style={{ height: '30px' }}
+            />
           </div>
 
           <div className="col-md-9 triangle-left-md triangle-top-sm">
@@ -59,8 +62,8 @@ const AboutSection = ({ myDetails }) => {
                   <div
                     className="spacer d-md-none d-lg-none"
                     data-height="30"
-                    style={{ height: "30px" }}
-                  ></div>
+                    style={{ height: '30px' }}
+                  />
                 </div>
                 <div className="col-md-6">
                   <div className="skill-item">
@@ -70,10 +73,10 @@ const AboutSection = ({ myDetails }) => {
                     <Tetris
                       tetromino={[
                         {
-                          type: "progress",
-                          content: "50",
+                          type: 'progress',
+                          content: '50',
                           showcontent: false,
-                          theme: "warning",
+                          theme: 'warning',
                         },
                       ]}
                     />
@@ -86,10 +89,10 @@ const AboutSection = ({ myDetails }) => {
                     <Tetris
                       tetromino={[
                         {
-                          type: "progress",
-                          content: "60",
+                          type: 'progress',
+                          content: '60',
                           showcontent: false,
-                          theme: "primary",
+                          theme: 'primary',
                         },
                       ]}
                     />
@@ -102,10 +105,10 @@ const AboutSection = ({ myDetails }) => {
                     <Tetris
                       tetromino={[
                         {
-                          type: "progress",
-                          content: "70",
+                          type: 'progress',
+                          content: '70',
                           showcontent: false,
-                          theme: "danger",
+                          theme: 'danger',
                         },
                       ]}
                     />
@@ -119,8 +122,8 @@ const AboutSection = ({ myDetails }) => {
         <div
           className="spacer"
           data-height="70"
-          style={{ height: "70px" }}
-        ></div>
+          style={{ height: '70px' }}
+        />
 
         {/* <div className="row">
           <div className="col-md-3 col-sm-6">
@@ -169,8 +172,8 @@ const AboutSection = ({ myDetails }) => {
               <Facts heading={views} content="people dont like this site" />
             </Suspense>
           </div>
-                    </div>*/}
-      </div> 
+                    </div> */}
+      </div>
     </section>
   );
 };

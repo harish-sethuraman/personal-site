@@ -5,9 +5,7 @@ const _loaded = {};
 class ImageLoader extends React.Component {
   
   //initial state: image loaded stage 
-  state = {
-    loaded: _loaded[this.props.src]
-  };
+  state = { loaded: _loaded[this.props.src] };
 
   //define our loading and loaded image classes
   static defaultProps = {
