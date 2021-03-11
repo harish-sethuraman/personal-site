@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { updateItem, getItem } from '../../utils/localStorage';
 
 const ThemeSelector = () => {
@@ -51,24 +52,16 @@ const Navbar = () => {
           >
             <ul className="navbar-nav ml-auto scrollspy">
               <li className="nav-item">
-                <a className="nav-link active" href="#home">
-                  Home
-                </a>
+                <Link className="nav-link active" to="/#home">Home</Link>
+              </li>
+              {/* <li className="nav-item">
+                <Link className="nav-link" to='/#about'>About</Link>
+              </li> */}
+              <li className="nav-item">
+                <Link className="nav-link" to="/projects">Projects</Link>
               </li>
               <li className="nav-item">
-                <a href="#about" className="nav-link">
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#projects" className="nav-link">
-                  Projects
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#experience" className="nav-link">
-                  Experience
-                </a>
+                <a className="nav-link" href="#experience">Experience</a>
               </li>
               <li className="nav-item">
                 <ThemeSelector />

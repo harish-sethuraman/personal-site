@@ -1,4 +1,4 @@
-const htmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -8,15 +8,16 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   output: {
     path: path.resolve(__dirname, 'dist'),
     // filename: '[name].[contenthash].js',
+    publicPath: '/',
   },
   module: {
     rules: [
       {
-        test: /\.(jpeg|jpg|png|gif|svg|webp|json)$/i,
+        test: /\.(jpeg|jpg|png|gif|svg|webp)$/i,
         loader: 'file-loader',
       },
       {
@@ -42,7 +43,7 @@ module.exports = {
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: [path.join(__dirname, 'docs/**/*')],
     }),
-    new htmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: './src/public/index.html',
     }),
     new WorkboxPlugin.GenerateSW({
@@ -50,9 +51,9 @@ module.exports = {
       runtimeCaching: [
         {
           urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-          handler: "CacheFirst",
+          handler: 'CacheFirst',
           options: {
-            cacheName: "images",
+            cacheName: 'images',
             expiration: {
               maxEntries: 10,
             },
@@ -64,7 +65,7 @@ module.exports = {
       patterns: [
         'src/public/img',
         'src/public/manifest.json',
-        { from: 'datas/data.json', to: 'datas/' },
+        { from: 'datas/', to: 'datas/' },
       ],
     }),
   ],

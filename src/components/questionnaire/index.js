@@ -9,6 +9,17 @@ const Questionnaire = () => {
   }, []);
 
   const setAnswerStatus = (status) => {
+    if (status) {
+      const options = {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ endorsement: 1 }),
+      };
+      fetch('https://view-counterr.herokuapp.com/api/endorsement', options);
+    }
     updateItem('liked_site', status);
     toggleAnswerStatus(status);
   };

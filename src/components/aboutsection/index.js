@@ -1,9 +1,9 @@
 import React, {
-  lazy, useState,
+  lazy, useState, useEffect, Suspense,
 } from 'react';
 import LazyLoad from 'react-lazy-load';
+import Tetris from 'tetris-components';
 import Harish from '../../assets/working.webp';
-import Tetris from '../../tetris/tetris';
 import ImageLoader from '../image-loader';
 /* eslint-disable no-unused-vars */
 const Facts = lazy(() => import('../facts'));
@@ -12,22 +12,20 @@ const AboutSection = ({ myDetails }) => {
   // const [myDetails, setMyDetails] = useState({ description: "" });
 /* eslint-disable no-unused-vars */
   const [views, setViews] = useState(0);
+  const [siteEndorsements, setSiteEndorsements] = useState(0);
+  const fetchViews = () => {
+    fetch('https://view-counterr.herokuapp.com/api/getcount')
+      .then((view) => view.json())
+      .then((values) => {
+        setViews(values.views);
+        setSiteEndorsements(values.endorsement.yes);
+        return values;
+      });
+  };
 
-  // const fetchViews = () => {
-  //   fetch("https://api.countapi.xyz/hit/strek/key")
-  //     .then((view) => {
-  //       return view.json();
-  //     })
-  //     .then((views) => {
-  //       // setViews(views.value)
-  //       return views;
-  //     });
-  // };
-
-  // useEffect(() => {
-
-  //   fetchViews();
-  // }, []);
+  useEffect(() => {
+    fetchViews();
+  }, []);
   return (
     <section id="about">
       <div className="container">
@@ -71,14 +69,12 @@ const AboutSection = ({ myDetails }) => {
                       <h4 className="float-left mb-3 mt-0">React JS</h4>
                     </div>
                     <Tetris
-                      tetromino={[
-                        {
-                          type: 'progress',
-                          content: '50',
-                          showcontent: false,
-                          theme: 'warning',
-                        },
-                      ]}
+                      tetromino={{
+                        type: 'progress',
+                        content: '50',
+                        showcontent: false,
+                        theme: 'warning',
+                      }}
                     />
                   </div>
 
@@ -87,14 +83,14 @@ const AboutSection = ({ myDetails }) => {
                       <h4 className="float-left mb-3 mt-3">Javascript</h4>
                     </div>
                     <Tetris
-                      tetromino={[
+                      tetromino={
                         {
                           type: 'progress',
                           content: '60',
                           showcontent: false,
                           theme: 'primary',
-                        },
-                      ]}
+                        }
+                      }
                     />
                   </div>
 
@@ -103,14 +99,14 @@ const AboutSection = ({ myDetails }) => {
                       <h4 className="float-left mb-3 mt-3"> Webpack </h4>
                     </div>
                     <Tetris
-                      tetromino={[
+                      tetromino={
                         {
                           type: 'progress',
                           content: '70',
                           showcontent: false,
                           theme: 'danger',
-                        },
-                      ]}
+                        }
+}
                     />
                   </div>
                 </div>
@@ -125,54 +121,54 @@ const AboutSection = ({ myDetails }) => {
           style={{ height: '70px' }}
         />
 
-        {/* <div className="row">
+        <div className="row">
           <div className="col-md-3 col-sm-6">
             <Suspense
               fallback={<h5>There was some problem loading component</h5>}
             >
-              <Facts heading={views} content="Views" />
+              <Facts icon="eye" heading={views} content="Views" />
             </Suspense>
             <div
               className="spacer d-md-none d-lg-none"
               data-height="30"
-              style={{ height: "30px" }}
-            ></div>
+              style={{ height: '30px' }}
+            />
           </div>
 
           <div className="col-md-3 col-sm-6">
             <Suspense
               fallback={<h5>There was some problem loading component</h5>}
             >
-              <Facts heading={2} content="Endorsements for web development" />
+              <Facts heading={7} icon="trophy" content="Endorsements for web development" />
             </Suspense>
             <div
               className="spacer d-md-none d-lg-none"
               data-height="30"
-              style={{ height: "30px" }}
-            ></div>
+              style={{ height: '30px' }}
+            />
           </div>
 
           <div className="col-md-3 col-sm-6">
             <Suspense
               fallback={<h5>There was some problem loading component</h5>}
             >
-              <Facts heading={views} content="People like this site" />
+              <Facts icon="plus" heading={siteEndorsements} content="Persons like the site" />
             </Suspense>
             <div
               className="spacer d-md-none d-lg-none"
               data-height="30"
-              style={{ height: "30px" }}
-            ></div>
+              style={{ height: '30px' }}
+            />
           </div>
 
           <div className="col-md-3 col-sm-6">
             <Suspense
               fallback={<h5>There was some problem loading component</h5>}
             >
-              <Facts heading={views} content="people dont like this site" />
+              <Facts icon="star-o" heading="90%" content="Matches the person you are looking for" />
             </Suspense>
           </div>
-                    </div> */}
+        </div>
       </div>
     </section>
   );

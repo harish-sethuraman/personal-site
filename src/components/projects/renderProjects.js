@@ -1,6 +1,6 @@
 import React from 'react';
 import LazyLoad from 'react-lazy-load';
-import Tetris from '../../tetris/tetris';
+import Tetris from 'tetris-components';
 import ImageLoader from '../image-loader';
 
 const RenderProjects = (name) => {
@@ -41,7 +41,7 @@ const RenderProjects = (name) => {
     case 'Tetris':
       return (
         <Tetris
-          tetromino={[
+          tetromino={
             {
               type: 'accordion',
               tetromino: [
@@ -62,8 +62,8 @@ const RenderProjects = (name) => {
                   content: 'You can contribute too.',
                 },
               ],
-            },
-          ]}
+            }
+}
         />
       );
     case 'WEFMS':

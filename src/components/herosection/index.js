@@ -103,7 +103,7 @@ const HeroSection = () => {
 
           <div className="slidingVertical mb-2">
             <h2>Software Engineer at Freshworks 👨🏻‍💻</h2>
-            <h2>Javascript Enthusiast 🤪</h2>
+            <h2>Javascript Enthusiast </h2>
             <h2>Webpack beginner 🥳</h2>
             <h2>C++ guy 😌</h2>
             <h2>React JS fan🎉</h2>
@@ -123,8 +123,8 @@ const HeroSection = () => {
           </ul>
 
           <div className="mt-4">
-            <a href="/projects" className="btn btn-default">
-              Hire me
+            <a href="https://www.linkedin.com/in/harish-kumar-7b4a8715b/" className="btn btn-default">
+              Hire me 
             </a>
           </div>
         </div>

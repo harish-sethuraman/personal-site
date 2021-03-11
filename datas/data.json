@@ -46,7 +46,7 @@
        
         {
           "name": "WEFMS",
-          "description": "WEFMS stands for Wireless Engine Fuel Monitoring System. The motive of this project is to maintain the generators that are located remotely anywhere.<br/>Turn on or Turn off the generators from any where around the world using the Web-App.",
+          "description": "WEFMS stands for Wireless Engine Fuel Monitoring System. The motive of this project is to maintain the generators that are located remotely.<br/>Turn on or Turn off the generators from any where around the world using the Web-App.",
           "link": "/proje",
           "showcase": "<center><img src='https://harishkumar-s-s.firebaseapp.com/assets/img/svgs/wefms.svg' style='height : 400px; width : 200px' class='card-img-top' alt='image'></center>"
         },
