@@ -66,7 +66,7 @@ const RenderProjects = (name) => {
 }
         />
       );
-    case 'WEFMS':
+    case 'Portal for WEFMS':
       return (
         <center>
           <LazyLoad width={200} height={400} debounce={false} offset={10000}>
@@ -78,7 +78,7 @@ const RenderProjects = (name) => {
           </LazyLoad>
         </center>
       );
-    case 'KLN Vidyalaya':
+    case 'Static site for KLN Vidyalaya':
       return (
         <center>
           <LazyLoad width={200} height={400} debounce={false} offset={10000}>

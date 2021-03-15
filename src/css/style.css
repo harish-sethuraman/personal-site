@@ -1005,9 +1005,6 @@ color : #454360;
   margin: auto;
   text-align: center;
 }
-.mouse-wrapper:hover {
-  color: #fff;
-}
 
 body.dark .mouse { 
   border: solid 2px #fff;
