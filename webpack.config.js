@@ -65,6 +65,7 @@ module.exports = {
       patterns: [
         'src/public/img',
         'src/public/manifest.json',
+        'src/public/_redirects',
         { from: 'datas/', to: 'datas/' },
       ],
     }),
