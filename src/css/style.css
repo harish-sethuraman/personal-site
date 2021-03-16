@@ -537,7 +537,12 @@ section.home.light .social-icons li a:hover {
 .fact-item p {
   font-size: 16px;
 }
-
+.fact-item .icons{
+  color : #454360;
+}
+body.dark .fact-item .icons{
+  color : #fff;
+}
 .blog-item:hover {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -1833,12 +1838,13 @@ body.dark .dynamic-shadow{
   justify-content: space-around;
 }
 .slidingVertical h2 {
-  animation: topToBottom 7.5s linear infinite 0s;
-  -ms-animation: topToBottom 7.5s linear infinite 0s;
-  -webkit-animation: topToBottom 7.5s linear infinite 0s;
+  animation: bottomToTop 7.5s linear infinite 0s;
+  -ms-animation: bottomToTop 7.5s linear infinite 0s;
+  -webkit-animation: bottomToTop 7.5s linear infinite 0s;
   opacity: 0;
   overflow: hidden;
   position: absolute;
+  margin : 0px;
 }
 .slidingVertical h2:nth-child(2) {
   animation-delay: 1.5s;
@@ -1862,26 +1868,26 @@ body.dark .dynamic-shadow{
 }
 
 
-@-moz-keyframes topToBottom {
+@-moz-keyframes bottomToTop {
   0% {
     opacity: 0;
   }
   5% {
-    opacity: 0;
-    -moz-transform: translateY(-50px);
-  }
-  10% {
-    opacity: 1;
-    -moz-transform: translateY(0px);
-  }
-  25% {
-    opacity: 1;
-    -moz-transform: translateY(0px);
-  }
-  30% {
     opacity: 0;
     -moz-transform: translateY(50px);
   }
+  10% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+  25% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+  30% {
+    opacity: 0;
+    -moz-transform: translateY(-150px);
+  }
   80% {
     opacity: 0;
   }
@@ -1889,13 +1895,13 @@ body.dark .dynamic-shadow{
     opacity: 0;
   }
 }
-@-webkit-keyframes topToBottom {
+@-webkit-keyframes bottomToTop {
   0% {
     opacity: 0;
   }
   5% {
     opacity: 0;
-    -webkit-transform: translateY(-50px);
+    -webkit-transform: translateY(50px);
   }
   10% {
     opacity: 1;
@@ -1907,7 +1913,7 @@ body.dark .dynamic-shadow{
   }
   30% {
     opacity: 0;
-    -webkit-transform: translateY(50px);
+    -webkit-transform: translateY(-50px);
   }
   80% {
     opacity: 0;
@@ -1916,7 +1922,7 @@ body.dark .dynamic-shadow{
     opacity: 0;
   }
 }
-@-ms-keyframes topToBottom {
+@-ms-keyframes bottomToTop {
   0% {
     opacity: 0;
   }
@@ -2097,10 +2103,7 @@ color : #fff;
   margin: 0;
 }
 .intro-image {
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
-  background: #ff4c60;
+border-radius: 50%;
 }
 
 .rocket {
@@ -2124,7 +2127,7 @@ color : #fff;
 }
 
 body {
-  transition : background 0.5s ease,color 0.5s ease;
+  transition : background-color 0.5s ease;
 }
 .theme-selector{
   background-color:white;

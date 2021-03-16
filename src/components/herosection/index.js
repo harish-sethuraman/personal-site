@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import lax from 'lax.js';
 import LazyLoad from 'react-lazy-load';
-import Harish from '../../assets/hi.webp';
 import ImageLoader from '../image-loader';
 
 const HeroSection = () => {
@@ -87,12 +86,12 @@ const HeroSection = () => {
           <center>
             <div className="intro-image">
               <LazyLoad
-                width={100}
-                height={100}
+                width={150}
+                height={150}
                 debounce={false}
                 offset={400}
               >
-                <ImageLoader src={Harish} alt="Strek" className="mb-4" />
+                <ImageLoader src="https://avatars.githubusercontent.com/u/32865581?s=460&u=c4feab5026e0578e9e899d66ec04fbbeb2991b7a&v=4" alt="Strek" className="intro-image mb-4" />
               </LazyLoad>
             </div>
           </center>

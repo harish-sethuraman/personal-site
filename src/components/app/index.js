@@ -2,10 +2,10 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Section from '../section';
 import Navbar from '../navbar';
-import TetrisPage from '../pages/tetris/tetris';
-import ReadmeComponentsPage from '../pages/readme-components';
-import WEFMSpage from '../pages/wefms';
 
+const TetrisPage = lazy(() => import('../pages/tetris/tetris'));
+const ReadmeComponentsPage = lazy(() => import('../pages/readme-components'));
+const WEFMSpage = lazy(() => import('../pages/wefms'));
 const Projects = lazy(() => import('../projects-page'));
 
 const App = () => (
@@ -26,9 +26,22 @@ const App = () => (
                   <Projects />
                 </Suspense>
               </Route>
-              <Route path={`${url}/tetris`} component={TetrisPage} />
-              <Route path={`${url}/ReadmeComponents`} component={ReadmeComponentsPage} />
-              <Route path={`${url}/WEFMS`} component={WEFMSpage} />
+              <Route path={`${url}/tetris`}>
+                <Suspense fallback={<h1>No route found</h1>}>
+                  <TetrisPage />
+                </Suspense>
+              </Route>
+              <Route path={`${url}/ReadmeComponents`}>
+                <Suspense fallback={<h1>No route found</h1>}>
+
+                  <ReadmeComponentsPage />
+                </Suspense>
+              </Route>
+              <Route path={`${url}/WEFMS`}>
+                <Suspense fallback={<h1>No route found</h1>}>
+                  <WEFMSpage />
+                </Suspense>
+              </Route>
 
             </>
           )}
