@@ -101,7 +101,7 @@ const HeroSection = () => {
             Hey 👋 ! I’m Harish Kumar
           </h1>
 
-          <div className="slidingVertical mb-2">
+          <div className="slidingVertical">
             <h2>Software Engineer at Freshworks 👨🏻‍💻</h2>
             <h2>Javascript Enthusiast </h2>
             <h2>Webpack beginner 🥳</h2>
@@ -109,10 +109,15 @@ const HeroSection = () => {
             <h2>React JS fan🎉</h2>
           </div>
 
-          <ul className="social-icons  list-inline mb-0 mt-4">
+          <ul className="social-icons  list-inline mb-0">
             <li className="list-inline-item">
               <a href="https://github.com/harish-sethuraman">
                 <i className="fa fa-github" />
+              </a>
+            </li>
+            <li className="list-inline-item">
+              <a href="https://www.linkedin.com/in/harish-kumar-7b4a8715b/">
+                <i className="fa fa-linkedin" />
               </a>
             </li>
             <li className="list-inline-item">
@@ -123,7 +128,7 @@ const HeroSection = () => {
           </ul>
 
           <div className="mt-4">
-            <a href="https://www.linkedin.com/in/harish-kumar-7b4a8715b/" className="btn btn-default">
+            <a href="mailto:ssharishkumargmail.com?subject=Pinging from website" className="btn btn-default">
               Hire me 
             </a>
           </div>
