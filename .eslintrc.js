@@ -28,5 +28,7 @@ module.exports = {
     'react/no-danger': 0,
     'consistent-return': 0,
     'no-nested-ternary': 0,
+    'import/no-dynamic-require': 0,
+    'global-require': 0,
   },
 };

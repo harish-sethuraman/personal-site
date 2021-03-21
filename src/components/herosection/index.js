@@ -128,7 +128,7 @@ const HeroSection = () => {
 
           <div className="mt-4">
             <a href="mailto:ssharishkumargmail.com?subject=Pinging from website" className="btn btn-default">
-              Hire me 
+              Hire me
             </a>
           </div>
         </div>

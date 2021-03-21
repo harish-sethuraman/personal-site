@@ -1,17 +1,17 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WorkboxPlugin = require('workbox-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const { merge } = require('webpack-merge');
 
-module.exports = {
-  mode: 'production',
+const configImport = (mode) => require(`./configs/webpack.${mode}`)(mode);
+
+const commonConfig = {
   output: {
     path: path.resolve(__dirname, 'dist'),
-    // filename: '[name].[contenthash].js',
     publicPath: '/',
   },
   module: {
@@ -46,21 +46,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/public/index.html',
     }),
-    new WorkboxPlugin.GenerateSW({
-      exclude: [/\.(?:png|jpg|jpeg|svg)$/],
-      runtimeCaching: [
-        {
-          urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-          handler: 'CacheFirst',
-          options: {
-            cacheName: 'images',
-            expiration: {
-              maxEntries: 10,
-            },
-          },
-        },
-      ],
-    }),
     new CopyWebpackPlugin({
       patterns: [
         'src/public/img',
@@ -81,3 +66,7 @@ module.exports = {
     historyApiFallback: true,
   },
 };
+module.exports = (env, { mode }) => merge(
+  commonConfig,
+  configImport(mode),
+);

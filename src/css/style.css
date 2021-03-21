@@ -2174,3 +2174,8 @@ transition: display ease 0.7s;
     height : 200px;
     width : 200px;
   }
+
+  body {
+    opacity : 0;
+    transition : opacity 3s; 
+  }
