@@ -23,7 +23,7 @@ class ImageLoader extends React.Component {
 
   render() {
   
-    let { className, loadedClassName, loadingClassName, ...props } = this.props;
+    let { className, loadedClassName, loadingClassName,alt, ...props } = this.props;
 
     className = `${className} ${this.state.loaded
       ? loadedClassName
@@ -33,7 +33,8 @@ class ImageLoader extends React.Component {
              src={this.props.src} 
              onClick={this.props.onClick} 
              className={className} 
-             onLoad={this.onLoad} />;
+             onLoad={this.onLoad}
+             alt={alt} />;
   }
 }
 

@@ -18,7 +18,7 @@ const AboutSection = ({ myDetails }) => {
       .then((view) => view.json())
       .then((values) => {
         setViews(values.views);
-        setSiteEndorsements(values.endorsement.yes);
+        setSiteEndorsements(values.yes);
         return values;
       });
   };

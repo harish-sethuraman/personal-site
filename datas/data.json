@@ -1,5 +1,5 @@
 {
-    "description": "Tenacios developer who can harness the power of HTML, CSS and JS together 😄. I work on projects that exite me the most. Im currently addicted to webpack and reactjs and working on emberjs. I always continue to be in the learning process 🧑‍🏫",
+    "description": "Tenacious developer who can harness the power of HTML, CSS and JS together 😄. I work on projects that exite me the most. Im currently addicted to webpack and reactjs and working on emberjs. I always continue to be in the learning process 🧑‍🏫",
     "skills": {
         "React JS": "85%",
         "Webpack": "85%"
@@ -39,14 +39,14 @@
         },
         {
           "name": "Readme Components",
-          "description": "<ul><li>SVG based components for markdowns</li> <li>Can be used in github markdowns too</li> <li>Written in JavaScript and deployed in Vercel</li> <li>Demo <a href='www.github.com/harish-sethuraman'> here </a></li></ul>",
+          "description": "<ul><li>SVG based components for markdowns</li> <li>Can be used in github markdowns too</li> <li>Written in JavaScript and deployed in Vercel</li> <li><a href='www.github.com/harish-sethuraman'>Readme components demo here </a></li></ul>",
           "link": "/projects",
           "showcase": "<center> <img src='https://readme-components.vercel.app/api?component=experience&amp;company=freshworks&amp;role=software%20Developer%20Intern&amp;duration=7m&amp;location=chennai&amp;fill=93c4fc' alt='image'> <img src='https://readme-components.vercel.app/api?component=logo&amp;fill=black&amp;logo=webpack&amp;svgfill=8ed5fa' alt='image'><img src='https://readme-components.vercel.app/api?component=logo&amp;fill=black&amp;logo=react&amp;animation=spin&amp;svgfill=15d8fe' alt='image'><img width='95%' src='https://readme-components.vercel.app/api?component=stackoverflow&amp;stackoverflowid=8780399&amp;textfill=black&amp;fill=93c4fc&amp;textfill=white' alt='image'></center>"
         },
        
         {
           "name": "Portal for WEFMS",
-          "description": "<ul> <li>Developed Portal and RPI script for Wireless Engine Fuel Monitoring System</li> <li>Monitor remotely located engines</li> <li>Portal built with PHP</li> <li>Demo <a href='www.wefms.com'> here</a></li></ul>",
+          "description": "<ul> <li>Developed Portal and RPI script for Wireless Engine Fuel Monitoring System</li> <li>Monitor remotely located engines</li> <li>Portal built with PHP</li> <li><a href='www.wefms.com'>WEFMS demo here</a></li></ul>",
           "link": "/proje",
           "showcase": "<center><img src='../wefms.svg' style='height : 400px; width : 200px' class='card-img-top' alt='image'></center>"
         },
