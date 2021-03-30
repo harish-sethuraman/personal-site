@@ -30,7 +30,7 @@ const Projects = () => {
           key={Math.random()}
           className="row mt-5 mb-5 justify-content-center projects"
         >
-          <div className="col-8 dynamic-background">
+          <div className="col-8 rounded dynamic-background">
 
             <p>I have listed here some of the projects that are unique and up until now</p>
           </div>
@@ -39,11 +39,11 @@ const Projects = () => {
             <div className="col-8 padding-10 project">
               <div className="project-card  dynamic-background rounded dynamic-shadow padding-20 overflow-hidden">
                 <div className="row">
-                  <div className="col-8">
+                  <div className="col-lg-8 col-sm-auto">
                     <h3>{project.name}</h3>
                     {/* <p>{project.description}</p> */}
                   </div>
-                  <div className="col-4">
+                  <div className="col-lg-4 col-sm-auto" >
                     <Link className="btn btn-danger" to={`projects/${project.name.replace(' ', '')}`}>know more</Link>
                   </div>
                 </div>

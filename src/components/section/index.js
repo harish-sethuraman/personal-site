@@ -38,8 +38,8 @@ const Section = () => {
   }, []);
   return (
     <>
-      <img src={Rocket} alt="rocket" className="rocket" />
-      <img src={Mars} alt="mars" className="mars" />
+      {/* <img src={Rocket} alt="rocket" className="rocket" /> */}
+      {/* <img src={Mars} alt="mars" className="mars" /> */}
 
       <div
         className="bubbles"

@@ -61,23 +61,23 @@ const HeroSection = () => {
         ],
       },
     });
-    lax.addElements('.rocket', {
-      scrollY: {
-        translateX: [[0, 'elOutY'], [0, 'screenWidth-150']],
-        rotate: [
-          [0],
-          [45],
-        ],
-      },
-    });
-    lax.addElements('.mars', {
-      scrollY: {
-        rotate: [
-          [0, 1000],
-          [1000, 4000],
-        ],
-      },
-    });
+    // lax.addElements('.rocket', {
+    //   scrollY: {
+    //     translateX: [[0, 'elOutY'], [0, 'screenWidth-150']],
+    //     rotate: [
+    //       [0],
+    //       [45],
+    //     ],
+    //   },
+    // });
+    // lax.addElements('.mars', {
+    //   scrollY: {
+    //     rotate: [
+    //       [0, 1000],
+    //       [1000, 4000],
+    //     ],
+    //   },
+    // });
   }, []);
   return (
     <section id="home" className="home d-flex  align-items-center">
