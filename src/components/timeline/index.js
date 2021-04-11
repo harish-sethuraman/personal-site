@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react';
-import lax from 'lax.js';
+// import lax from 'lax.js';
 
 const TimeLine = ({ positionDetails }) => {
-  useEffect(() => {
-    lax.addElements('.timeline-item ', {
-      scrollY: {
-        opacity: [
-          ['elCenterY + 200', 'elOutY + 200'],
-          [1, 0],
-        ],
-      },
-    });
-  }, []);
+  // useEffect(() => {
+    // lax.addElements('.timeline-item ', {
+    //   scrollY: {
+    //     opacity: [
+    //       ['elCenterY + 200', 'elOutY + 200'],
+    //       [1, 0],
+    //     ],
+    //   },
+    // });
+  // }, []);
   return (
     <div className="container">
       <div id="timeline">

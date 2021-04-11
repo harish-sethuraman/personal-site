@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Section from '../section';
 import Navbar from '../navbar';
+import "../../css/style.css";
 
 const TetrisPage = lazy(() => import('../pages/tetris/tetris'));
 const ReadmeComponentsPage = lazy(() => import('../pages/readme-components'));

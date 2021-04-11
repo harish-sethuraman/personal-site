@@ -1,29 +1,27 @@
-import React, {
-  useState, lazy, useEffect, Suspense,
-} from 'react';
-import Stars from '../stars';
+import React, { useState, lazy, useEffect, Suspense } from "react";
+import Stars from "../stars";
 // import HeroSection from "../herosection";
 // const AboutSection = lazy(() => import("../aboutsection"));
-import AboutSection from '../aboutsection';
-// const Projects = lazy(() => import("../projects"));
-// const Questionnaire = lazy(() => import("../questionnaire"));
+import AboutSection from "../aboutsection";
+const Projects = lazy(() => import("../projects"));
+const Questionnaire = lazy(() => import("../questionnaire"));
 
 // import ExperienceSection from "../experiencesection";
-import Projects from '../projects';
-import Questionnaire from '../questionnaire';
-import Rocket from '../../assets/rocket.svg';
-import Mars from '../../assets/mars.svg';
+// import Projects from "../projects";
+// import Questionnaire from "../questionnaire";
+import Rocket from "../../assets/rocket.svg";
+import Mars from "../../assets/mars.svg";
 
-const HeroSection = lazy(() => import('../herosection'));
-const ExperienceSection = lazy(() => import('../experiencesection'));
+const HeroSection = lazy(() => import("../herosection"));
+const ExperienceSection = lazy(() => import("../experiencesection"));
 
 const Section = () => {
   const [userData, setUserData] = useState();
   const fetchMyData = () => {
-    fetch('../../../datas/data.json', {
+    fetch("../../../datas/data.json", {
       headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
+        "Content-Type": "application/json",
+        Accept: "application/json",
       },
     })
       .then((response) => response.json())
@@ -43,7 +41,7 @@ const Section = () => {
 
       <div
         className="bubbles"
-        style={{ top: '-100vh', position: 'fixed', zIndex: '1' }}
+        style={{ top: "-100vh", position: "fixed", zIndex: "1" }}
       >
         <Stars fill="#FF4C60" />
         <Stars fill="#FF4C60" />
@@ -84,7 +82,6 @@ const Section = () => {
         <Stars fill="#44D7B6" />
         <Stars fill="#44D7B6" />
         <Stars fill="#44D7B6" />
-
       </div>
 
       <main className="content">
@@ -93,14 +90,20 @@ const Section = () => {
             <Suspense fallback={<h1>Sorry couldnt load the component</h1>}>
               <HeroSection />
             </Suspense>
-            <AboutSection myDetails={userData} />
-
-            <Projects projects={userData.projects} />
             <Suspense fallback={<h1>Sorry couldnt load the component</h1>}>
+              <AboutSection myDetails={userData} />
+            </Suspense>
 
+            <Suspense fallback={<h1>Sorry couldnt load the component</h1>}>
+              <Projects projects={userData.projects} />
+            </Suspense>
+
+            <Suspense fallback={<h1>Sorry couldnt load the component</h1>}>
               <ExperienceSection positionDetails={userData.experience} />
             </Suspense>
-            <Questionnaire />
+            <Suspense fallback={<h1>Sorry couldnt load the component</h1>}>
+              <Questionnaire />
+            </Suspense>
           </>
         )}
 

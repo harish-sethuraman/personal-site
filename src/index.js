@@ -1,15 +1,19 @@
-import ReactDOM from 'react-dom';
-import React, { useState, useEffect } from 'react';
-import App from './components/app';
-import './css/style.css';
-import './css/animate.css';
+import ReactDOM from "react-dom";
+import React, { lazy, Suspense } from "react";
+const App = lazy(() => import("./components/app"));
+// import App from './components/app'
+import "./css/animate.css";
 
-import PageLoader from './components/loader';
+import PageLoader from "./components/loader";
 
 const Index = () => {
-  const [Loading, setLoading] = useState(true);
-  useEffect(() => setTimeout(() => setLoading(!Loading), 1500), []);
-  return <>{Loading ? <PageLoader /> : <App />}</>;
+  return (
+    <>
+      <Suspense fallback={<PageLoader />}>
+        <App />
+      </Suspense>
+    </>
+  );
 };
 
-ReactDOM.render(<Index />, document.getElementsByTagName('body')[0]);
+ReactDOM.render(<Index />, document.getElementsByTagName("body")[0]);

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import lax from 'lax.js';
 import LazyLoad from 'react-lazy-load';
 import ImageLoader from '../image-loader';
-
 const HeroSection = () => {
   useEffect(() => {
     // Setup lax
@@ -10,30 +9,30 @@ const HeroSection = () => {
 
     lax.addDriver('scrollY', () => window.scrollY);
 
-    lax.addElements('.triangle-left-md ', {
-      scrollY: {
-        translateX: [
-          ['elCenterY +200', 'elOutY +500'],
-          [0, 'screenHeight * 2'],
-        ],
-      },
-    });
+    // lax.addElements('.triangle-left-md ', {
+    //   scrollY: {
+    //     translateX: [
+    //       ['elCenterY +200', 'elOutY +500'],
+    //       [0, 'screenHeight * 2'],
+    //     ],
+    //   },
+    // });
 
-    lax.addElements('.project', {
-      scrollY: {
-        translateX: [['elCenterY + 200', 'elOutY + 500 '],
-          [0, 'screenHeight / -3']],
-      },
-    });
+    // lax.addElements('.project', {
+    //   scrollY: {
+    //     translateX: [['elCenterY + 200', 'elOutY + 500 '],
+    //       [0, 'screenHeight / -3']],
+    //   },
+    // });
 
-    lax.addElements('.strek-avatar', {
-      scrollY: {
-        translateX: [
-          ['elCenterY + 200', 'elOutY + 500 '],
-          [0, 'screenHeight / -3'],
-        ],
-      },
-    });
+    // lax.addElements('.strek-avatar', {
+    //   scrollY: {
+    //     translateX: [
+    //       ['elCenterY + 200', 'elOutY + 500 '],
+    //       [0, 'screenHeight / -3'],
+    //     ],
+    //   },
+    // });
     // Add your elements
     lax.addElements('.bubble', {
       scrollY: {
