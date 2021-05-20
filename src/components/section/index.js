@@ -1,34 +1,28 @@
-import React, { useState, lazy, useEffect, Suspense } from "react";
-import Stars from "../stars";
+import React, {
+  useState, lazy, useEffect, Suspense,
+} from 'react';
+import Stars from '../stars';
 // import HeroSection from "../herosection";
 // const AboutSection = lazy(() => import("../aboutsection"));
-import AboutSection from "../aboutsection";
-const Projects = lazy(() => import("../projects"));
-const Questionnaire = lazy(() => import("../questionnaire"));
+import AboutSection from '../aboutsection';
+import Data from '../../data';
 
 // import ExperienceSection from "../experiencesection";
 // import Projects from "../projects";
 // import Questionnaire from "../questionnaire";
-import Rocket from "../../assets/rocket.svg";
-import Mars from "../../assets/mars.svg";
+import Rocket from '../../assets/rocket.svg';
+import Mars from '../../assets/mars.svg';
 
-const HeroSection = lazy(() => import("../herosection"));
-const ExperienceSection = lazy(() => import("../experiencesection"));
+const Projects = lazy(() => import('../projects'));
+const Questionnaire = lazy(() => import('../questionnaire'));
+
+const HeroSection = lazy(() => import('../herosection'));
+const ExperienceSection = lazy(() => import('../experiencesection'));
 
 const Section = () => {
   const [userData, setUserData] = useState();
   const fetchMyData = () => {
-    fetch("../../../datas/data.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((myJson) => {
-        setUserData(myJson);
-        return myJson;
-      });
+    setUserData(Data);
   };
 
   useEffect(() => {
@@ -41,7 +35,7 @@ const Section = () => {
 
       <div
         className="bubbles"
-        style={{ top: "-100vh", position: "fixed", zIndex: "1" }}
+        style={{ top: '-100vh', position: 'fixed', zIndex: '1' }}
       >
         <Stars fill="#FF4C60" />
         <Stars fill="#FF4C60" />

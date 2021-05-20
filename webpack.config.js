@@ -6,13 +6,14 @@ const path = require('path');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { merge } = require('webpack-merge');
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
 const configImport = (mode) => require(`./configs/webpack.${mode}`)(mode);
 
 const commonConfig = {
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    // publicPath: '/',
   },
   module: {
     rules: [
@@ -36,6 +37,17 @@ const commonConfig = {
     ],
   },
   plugins: [
+    new ModuleFederationPlugin(
+      {
+        name: 'PORTFOLIO',
+        filename:
+          'remoteEntry.js',
+        exposes: {
+          './Portfolio':
+            './src/index',
+        },
+      },
+    ),
     // new MiniCssExtractPlugin({
     //   filename: '[name].css',
     //   chunkFilename: '[id].css',

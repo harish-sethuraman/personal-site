@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Data from '../../data';
 
 import './index.css';
 
@@ -7,17 +8,7 @@ const Projects = () => {
   const [userData, setUserData] = useState();
 
   const fetchMyData = () => {
-    fetch('../../../datas/data.json', {
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-    })
-      .then((response) => response.json())
-      .then((myJson) => {
-        setUserData(myJson);
-        return myJson;
-      });
+    setUserData(Data);
   };
   useEffect(() => {
     fetchMyData();
@@ -36,15 +27,15 @@ const Projects = () => {
           </div>
           {userData && userData.projects.map((project) => (
 
-            <div className="col-8 padding-10 project">
+            <div key={project.name} className="col-8 padding-10 project">
               <div className="project-card  dynamic-background rounded dynamic-shadow padding-20 overflow-hidden">
                 <div className="row">
                   <div className="col-lg-8 col-sm-auto">
                     <h3>{project.name}</h3>
                     {/* <p>{project.description}</p> */}
                   </div>
-                  <div className="col-lg-4 col-sm-auto" >
-                    <Link className="btn btn-danger" to={`projects/${project.name.replace(' ', '')}`}>know more</Link>
+                  <div className="col-lg-4 col-sm-auto">
+                    <Link className="btn btn-danger" to={`projects/${project.name.replaceAll(' ', '')}`}>know more</Link>
                   </div>
                 </div>
               </div>
