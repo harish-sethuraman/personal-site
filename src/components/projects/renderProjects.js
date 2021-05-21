@@ -66,7 +66,7 @@ const RenderProjects = (name) => {
 }
         />
       );
-    case 'Portal for WEFMS':
+    case 'WEFMS':
       return (
         <center>
           <LazyLoad width={200} height={400} debounce={false} offset={10000}>

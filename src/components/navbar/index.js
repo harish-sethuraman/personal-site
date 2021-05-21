@@ -31,7 +31,7 @@ const Navbar = () => {
   const [navStatus, toggleNav] = useState(false);
 
   return (
-    <header className="navbar-header fixed-top">
+    <header className="navbar-header">
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-dark">
           <button

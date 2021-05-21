@@ -44,8 +44,9 @@ const commonConfig = {
           'remoteEntry.js',
         exposes: {
           './Portfolio':
-            './src/index',
+            './src/components/app/index.js',
         },
+        shared: [{ react: { singleton: true } }],
       },
     ),
     // new MiniCssExtractPlugin({

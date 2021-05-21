@@ -35,7 +35,7 @@ const Section = () => {
 
       <div
         className="bubbles"
-        style={{ top: '-100vh', position: 'fixed', zIndex: '1' }}
+        style={{ top: '-100vh', position: 'fixed', zIndex: '-1' }}
       >
         <Stars fill="#FF4C60" />
         <Stars fill="#FF4C60" />
@@ -81,21 +81,21 @@ const Section = () => {
       <main className="content">
         {userData && (
           <>
-            <Suspense fallback={<h1>Sorry couldnt load the component</h1>}>
+            <Suspense fallback={<center><h1>loading the component</h1></center>}>
               <HeroSection />
             </Suspense>
-            <Suspense fallback={<h1>Sorry couldnt load the component</h1>}>
+            <Suspense fallback={<center><h1>loading the component</h1></center>}>
               <AboutSection myDetails={userData} />
             </Suspense>
 
-            <Suspense fallback={<h1>Sorry couldnt load the component</h1>}>
+            <Suspense fallback={<center><h1>loading the component</h1></center>}>
               <Projects projects={userData.projects} />
             </Suspense>
 
-            <Suspense fallback={<h1>Sorry couldnt load the component</h1>}>
+            <Suspense fallback={<center><h1>loading the component</h1></center>}>
               <ExperienceSection positionDetails={userData.experience} />
             </Suspense>
-            <Suspense fallback={<h1>Sorry couldnt load the component</h1>}>
+            <Suspense fallback={<center><h1>loading the component</h1></center>}>
               <Questionnaire />
             </Suspense>
           </>
