@@ -1,6 +1,7 @@
 import React from 'react';
 import LazyLoad from 'react-lazy-load';
-import Tetris from 'tetris-components';
+// import Tetris from 'tetris-components';
+import Tetris from '../../tetris'
 import ImageLoader from '../image-loader';
 
 const RenderProjects = (name) => {

@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { merge } = require('webpack-merge');
@@ -13,7 +13,7 @@ const configImport = (mode) => require(`./configs/webpack.${mode}`)(mode);
 const commonConfig = {
   output: {
     path: path.resolve(__dirname, 'dist'),
-    // publicPath: '/',
+    // publicPath: '/', removing it for now since there are some issues in bigsur clone 
   },
   module: {
     rules: [
@@ -25,8 +25,7 @@ const commonConfig = {
         test: /\.css$/i,
         exclude: /node_modules/,
         use: [
-          // MiniCssExtractPlugin.loader,
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader'],
       },
       {
@@ -49,10 +48,9 @@ const commonConfig = {
         shared: [{ react: { singleton: true } }],
       },
     ),
-    // new MiniCssExtractPlugin({
-    //   filename: '[name].css',
-    //   chunkFilename: '[id].css',
-    // }),
+    new MiniCssExtractPlugin({
+      chunkFilename: 'portfolio.css',
+    }),
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: [path.join(__dirname, 'docs/**/*')],
     }),
@@ -69,6 +67,16 @@ const commonConfig = {
     }),
   ],
   optimization: {
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: 'styles',
+          type: 'css/mini-extract',
+          chunks: 'all',
+          enforce: true,
+        },
+      },
+    },
     minimize: true,
     minimizer: [
       new CssMinimizerPlugin(),

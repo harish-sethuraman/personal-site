@@ -2,7 +2,8 @@ import React, {
   lazy, useState, useEffect, Suspense,
 } from 'react';
 import LazyLoad from 'react-lazy-load';
-import Tetris from 'tetris-components';
+// import Tetris from 'tetris-components';
+import Tetris from '../../tetris'
 import Harish from '../../assets/working.webp';
 import ImageLoader from '../image-loader';
 /* eslint-disable no-unused-vars */
