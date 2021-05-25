@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import lax from 'lax.js';
 import LazyLoad from 'react-lazy-load';
 import ImageLoader from '../image-loader';
+
 const HeroSection = () => {
   useEffect(() => {
     // Setup lax
@@ -84,19 +85,20 @@ const HeroSection = () => {
         <div className="intro align-text-center">
           <center>
             <div className="intro-image">
-              <LazyLoad
-                width={150}
-                height={150}
-                debounce={false}
-                offset={400}
-              >
-                <ImageLoader src="https://avatars.githubusercontent.com/u/32865581?s=460&u=c4feab5026e0578e9e899d66ec04fbbeb2991b7a&v=4" alt="Strek" className="intro-image mb-4" />
+              <LazyLoad width={150} height={150} debounce={false} offset={400}>
+                <ImageLoader
+                  src="https://avatars.githubusercontent.com/u/32865581?s=460&u=c4feab5026e0578e9e899d66ec04fbbeb2991b7a&v=4"
+                  alt="Strek"
+                  className="intro-image mb-4"
+                />
               </LazyLoad>
             </div>
           </center>
 
           <h1 className="animate__animated animate__zoomIn mb-2 mt-0">
-            Hey 👋 ! I’m Harish Kumar
+            Hey 👋 ! I’m
+            {' '}
+            <a className="magic-link" href="https://github.com/harish-sethuraman" target="_blank" rel="noreferrer">Harish Kumar</a>
           </h1>
 
           <div className="slidingVertical">
@@ -126,7 +128,10 @@ const HeroSection = () => {
           </ul>
 
           <div className="mt-4">
-            <a href="mailto:ssharishkumargmail.com?subject=Pinging from website" className="btn btn-default">
+            <a
+              href="mailto:ssharishkumargmail.com?subject=Pinging from website"
+              className="btn btn-default"
+            >
               Hire me
             </a>
           </div>

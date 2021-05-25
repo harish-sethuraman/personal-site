@@ -4,6 +4,7 @@ import Section from '../section';
 import Navbar from '../navbar';
 // import '../../main.css';
 // import '../../css/style.css';
+import PageLoader from '../loader';
 
 const TetrisPage = lazy(() => import('../pages/tetris/tetris'));
 const ReadmeComponentsPage = lazy(() => import('../pages/readme-components'));
@@ -13,7 +14,7 @@ const Projects = lazy(() => import('../projects-page'));
 const App = ({ insideBigSur }) => {
   const importTheme = () => {
     if (!insideBigSur) {
-      return import('../../main.css') && import('../../css/style.css');
+      return import('../../main.css') && import('../../css/style.css') && import('../loader/index.css');
     }
   };
 
@@ -34,22 +35,22 @@ const App = ({ insideBigSur }) => {
             render={({ match: { url } }) => (
               <>
                 <Route path={`${url}/`} exact>
-                  <Suspense fallback={<h1>No route found</h1>}>
+                  <Suspense fallback={<PageLoader />}>
                     <Projects />
                   </Suspense>
                 </Route>
                 <Route path={`${url}/tetris`}>
-                  <Suspense fallback={<h1>No route found</h1>}>
+                  <Suspense fallback={<PageLoader />}>
                     <TetrisPage />
                   </Suspense>
                 </Route>
                 <Route path={`${url}/ReadmeComponents`}>
-                  <Suspense fallback={<h1>No route found</h1>}>
+                  <Suspense fallback={<PageLoader />}>
                     <ReadmeComponentsPage />
                   </Suspense>
                 </Route>
                 <Route path={`${url}/WEFMS`}>
-                  <Suspense fallback={<h1>No route found</h1>}>
+                  <Suspense fallback={<PageLoader />}>
                     <WEFMSpage />
                   </Suspense>
                 </Route>

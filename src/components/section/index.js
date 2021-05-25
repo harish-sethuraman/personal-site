@@ -2,7 +2,7 @@ import React, {
   useState, lazy, useEffect, Suspense,
 } from 'react';
 import Stars from '../stars';
-// import HeroSection from "../herosection";
+import HeroSection from "../herosection";
 // const AboutSection = lazy(() => import("../aboutsection"));
 import AboutSection from '../aboutsection';
 import Data from '../../data';
@@ -10,19 +10,29 @@ import Data from '../../data';
 // import ExperienceSection from "../experiencesection";
 // import Projects from "../projects";
 // import Questionnaire from "../questionnaire";
-import Rocket from '../../assets/rocket.svg';
-import Mars from '../../assets/mars.svg';
+// import Rocket from '../../assets/rocket.svg';
+// import Mars from '../../assets/mars.svg';
 
 const Projects = lazy(() => import('../projects'));
 const Questionnaire = lazy(() => import('../questionnaire'));
 
-const HeroSection = lazy(() => import('../herosection'));
+// const HeroSection = lazy(() => import('../herosection'));
 const ExperienceSection = lazy(() => import('../experiencesection'));
 
 const Section = ({ insideBigSur }) => {
   const [userData, setUserData] = useState();
+  const [views, setViews] = useState(0);
+  const [siteEndorsements, setSiteEndorsements] = useState(0);
+
   const fetchMyData = () => {
     setUserData(Data);
+    fetch('https://view-counterr.herokuapp.com/api/getcount')
+      .then((view) => view.json())
+      .then((values) => {
+        setViews(values.views);
+        setSiteEndorsements(values.yes);
+        return values;
+      });
   };
 
   useEffect(() => {
@@ -82,15 +92,7 @@ const Section = ({ insideBigSur }) => {
       <main className="content">
         {userData && (
           <>
-            <Suspense
-              fallback={(
-                <center>
-                  <h1>loading the component</h1>
-                </center>
-              )}
-            >
               <HeroSection />
-            </Suspense>
             <Suspense
               fallback={(
                 <center>
@@ -98,7 +100,11 @@ const Section = ({ insideBigSur }) => {
                 </center>
               )}
             >
-              <AboutSection myDetails={userData} />
+              <AboutSection
+                myDetails={userData}
+                views={views}
+                siteEndorsements={siteEndorsements}
+              />
             </Suspense>
 
             <Suspense
