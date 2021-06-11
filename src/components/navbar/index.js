@@ -61,9 +61,9 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link className={`nav-link ${location.pathname.slice(1) === 'projects' && 'active'}`} to="/projects">Projects</Link>
               </li>
-              {location.pathname.slice(1) !== 'projects' && (
+              {location.pathname.slice(1) === '' && (
               <li className="nav-item">
-                <Link className="nav-link" to="/#experience">Experience</Link>
+                <a className="nav-link" href="#experience">Experience</a>
               </li>
               )}
               <li className="nav-item">
