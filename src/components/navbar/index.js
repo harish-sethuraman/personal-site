@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link ,useLocation} from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { updateItem, getItem } from '../../utils/localStorage';
 
 const ThemeSelector = () => {
@@ -61,9 +61,11 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link className={`nav-link ${location.pathname.slice(1) === 'projects' && 'active'}`} to="/projects">Projects</Link>
               </li>
+              {location.pathname.slice(1) !== 'projects' && (
               <li className="nav-item">
-                <a className="nav-link" href="#experience">Experience</a>
+                <Link className="nav-link" to="/#experience">Experience</Link>
               </li>
+              )}
               <li className="nav-item">
                 <ThemeSelector />
               </li>
