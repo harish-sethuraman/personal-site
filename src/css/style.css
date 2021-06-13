@@ -1453,7 +1453,9 @@ body.dark .blog-page-section .blog-single {
   color: #8b88b1;
   font-size: 14px;
 }
-
+.timeline h2 {
+  font-weight: 600;
+}
 .timeline .content h3 {
   font-size: 20px;
   margin: 10px 0;
@@ -1837,6 +1839,7 @@ body.dark .dynamic-shadow {
   position: absolute;
   margin: 0px;
   z-index: -2;
+  font-weight: 500;
 }
 .slidingVertical h2:nth-child(2) {
   animation-delay: 1.5s;
@@ -2000,6 +2003,7 @@ img {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
+  z-index: 1;
 }
 #timeline .timeline-item .timeline-icon i {
   position: relative;
@@ -2035,7 +2039,7 @@ img {
   height: 0;
   border-top: 7px solid transparent;
   border-bottom: 7px solid transparent;
-  border-left: 7px solid #302f4e;
+  border-left: 7px solid #fff;
 }
 #timeline .timeline-item .timeline-content.right {
   float: right;
@@ -2049,10 +2053,20 @@ img {
 }
 
 body.dark #timeline .timeline-item .timeline-content.right:before {
-  border-right: 7px solid #302f4e;
+  border-right: 7px solid #fff;
+}
+.timeline-content h5 {
+  font-weight: 500;
 }
 
 @media screen and (max-width: 768px) {
+  section#cloneverse {
+    display: none;
+  }
+  .theme-selector {
+    margin: 10px 0px;
+  }
+
   #timeline {
     margin: 30px;
     padding: 0px;
@@ -2070,7 +2084,7 @@ body.dark #timeline .timeline-item .timeline-content.right:before {
     left: 10%;
     margin-left: -6px;
     border-left: 0;
-    border-right: 7px solid #302f4e;
+    border-right: 7px solid #fff;
   }
   #timeline .timeline-item .timeline-icon {
     left: 0;
@@ -2211,9 +2225,13 @@ body {
   text-decoration: unset;
   z-index: 3;
   cursor: pointer;
+  padding: 2px;
 }
 .magic-link:hover {
   background-size: 100% 88%;
+}
+body.dark .magic-link {
+  background-image: linear-gradient(120deg, #804ff5, #ff4cc0);
 }
 
 #container {
@@ -2354,6 +2372,61 @@ body {
   position: absolute;
 }
 
-#container .text-center{
-  color :white;
+#container .text-center {
+  color: white;
+}
+
+#macos-clone {
+  height: 50vh;
+  width: 60vw;
+  border: 1px solid #9c9da3;
+}
+
+.monitor {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 50vh;
+  width: 60vw;
+  padding: 20px 20px 20px 20px;
+  box-sizing: content-box;
+  background-color: #e1e3e6;
+}
+.mac-chin {
+  background: #c3c4e8;
+  height: 8vh;
+  width: calc(60vw + 40px);
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+#cloneverse {
+  display: flex;
+  justify-content: center;
+}
+.mac-stand {
+  background: linear-gradient(#9e9dc0, #c3c4e8);
+  height: 7vh;
+  width: 10vw;
+}
+.mac-base {
+  background: linear-gradient(#767496, #c3c4e8);
+  height: 1vh;
+  width: 12vw;
+  border-radius: 7px;
+}
+
+.monitor-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#cloneverse-text {
+  text-align: center;
+  margin: auto;
+}
+
+.hero-heading {
+  margin: 20px;
+}
+.additional-border {
+  border: 1px solid #5e5c7f;
 }

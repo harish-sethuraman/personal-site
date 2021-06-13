@@ -95,7 +95,7 @@ const HeroSection = () => {
             </div>
           </center>
 
-          <h1 className="animate__animated animate__zoomIn mb-2 mt-0">
+          <h1 className="animate__animated animate__zoomIn hero-heading">
             Hey 👋 ! I’m
             {' '}
             <a className="magic-link" href="https://github.com/harish-sethuraman" target="_blank" rel="noreferrer">Harish Kumar</a>

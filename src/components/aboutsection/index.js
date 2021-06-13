@@ -88,7 +88,7 @@ const AboutSection = ({ myDetails, views, siteEndorsements }) => (
         </div>
       </div>
 
-      <div className="spacer" data-height="70" style={{ height: '70px' }} />
+      <div className="spacer" data-height="70" style={{ height: '75px' }} />
 
       <div className="row">
         <div className="col-md-3 col-sm-6">

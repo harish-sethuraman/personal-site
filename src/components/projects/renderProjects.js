@@ -45,6 +45,7 @@ const RenderProjects = (name) => {
           tetromino={
             {
               type: 'accordion',
+              classes: 'additional-border',
               tetromino: [
                 {
                   type: 'accordion-content',

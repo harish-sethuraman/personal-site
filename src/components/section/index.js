@@ -2,11 +2,11 @@ import React, {
   useState, lazy, useEffect, Suspense,
 } from 'react';
 import Stars from '../stars';
-import HeroSection from "../herosection";
+import HeroSection from '../herosection';
 // const AboutSection = lazy(() => import("../aboutsection"));
 import AboutSection from '../aboutsection';
 import Data from '../../data';
-
+import MacUI from '../macUI';
 // import ExperienceSection from "../experiencesection";
 // import Projects from "../projects";
 // import Questionnaire from "../questionnaire";
@@ -92,7 +92,27 @@ const Section = ({ insideBigSur }) => {
       <main className="content">
         {userData && (
           <>
-              <HeroSection />
+            <HeroSection />
+            <section id="cloneverse-text" className="col-8">
+              <h1 className="project-name">Clone Verse</h1>
+              <p className="">
+                Just like MCU and DCEU, this is a Website Clone Universe (WCU).
+                Find things that you have loved using over the years.
+                {/* eslint-disable-next-line max-len */}
+                &nbsp;These websites are standalone websites as well as Micro
+                Frontends integrated with each other harmoniously. Every
+                site&apos;s source code can be found &nbsp;
+                <a
+                  className="magic-link"
+                  href="https://github.com/harish-sethuraman?tab=repositories"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  here
+                </a>
+              </p>
+            </section>
+            <section id="cloneverse">{!insideBigSur && <MacUI />}</section>
             <Suspense
               fallback={(
                 <center>
