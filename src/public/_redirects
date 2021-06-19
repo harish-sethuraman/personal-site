@@ -1,4 +1,3 @@
-/clones https://macos.netlify.app 301
+/clones https://macos-clone.netlify.app 301
 /*  /index.html 200
-/*/* /index.html 200
-/projects/ReadmeComponents /index.html 200
+/projects/* /index.html 200
