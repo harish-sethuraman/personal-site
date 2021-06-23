@@ -30,6 +30,11 @@ const TimeLine = ({ positionDetails }) => (
               </div>
             );
           })}
+      <div className="timeline-item">
+        <div className="timeline-icon">
+          <i className="fa fa-2x fa-graduation-cap" />
+        </div>
+      </div>
     </div>
   </div>
 );

@@ -1,3 +1,6 @@
 /clones https://macos-clone.netlify.app 301
-/*  /index.html 200
+/vscode https://vsclone.netlify.app 301
+/iterm https://terminal-clone.netlify.app 301
+/insta https://strek-insta.netlify.app 301
 /projects/* /index.html 200
+/*  /index.html 200

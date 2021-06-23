@@ -7,10 +7,10 @@ const data = {
   experience: [
     {
       position: 'Software Engineer - Frontend',
-      icon: 'trophy',
+      icon: 'arrow-up',
       company: 'Freshworks',
       duration: 'DEC 2020',
-      description: 'Currently still working on l4s and may implement some features probably',
+      description: 'Working on Optimizations and Improvements in Freshchat. Carried out occlusion rendering and reduced 3.3s on average.',
       link: '',
     },
     {
@@ -23,7 +23,7 @@ const data = {
     },
     {
       position: 'Software Engineer Intern',
-      icon: 'trophy',
+      icon: 'code',
       company: 'Freshworks',
       duration: 'JAN 2020',
       description: "Worked on Revamping entire Freshchat's UI. I also wrote Unit and Integration test cases. I learnt how to improve code coverage and TDD",
@@ -59,4 +59,4 @@ const data = {
   ],
 };
 
-export default data
+export default data;

@@ -2007,8 +2007,10 @@ img {
 }
 #timeline .timeline-item .timeline-icon i {
   position: relative;
-  top: 11px;
-  left: 11px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #timeline .timeline-item .timeline-content {
   width: 45%;
