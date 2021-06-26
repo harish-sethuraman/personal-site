@@ -13,7 +13,6 @@ const configImport = (mode) => require(`./configs/webpack.${mode}`)(mode);
 const commonConfig = {
   output: {
     path: path.resolve(__dirname, 'dist'),
-    // publicPath: '/', removing it for now since there are some issues in bigsur clone 
   },
   module: {
     rules: [
@@ -45,7 +44,13 @@ const commonConfig = {
           './Portfolio':
             './src/components/app/index.js',
         },
-        shared: [{ react: { singleton: true } }],
+        shared: [
+          {
+            react: {
+              requiredVersion: '^17.0.2',
+              singleton: true,
+            },
+          }],
       },
     ),
     new MiniCssExtractPlugin({

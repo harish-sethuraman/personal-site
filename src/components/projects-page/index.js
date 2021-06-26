@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Data from '../../data';
 
-import './index.css';
-
 const Projects = () => {
   const [userData, setUserData] = useState();
 
