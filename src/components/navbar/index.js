@@ -61,11 +61,11 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link className={`nav-link ${location.pathname.slice(1) === 'projects' && 'active'}`} to="/projects">Projects</Link>
               </li>
-              {location.pathname.slice(1) === '' && (
+              {/* {location.pathname.slice(1) === '' && (
               <li className="nav-item">
                 <a className="nav-link" href="#experience">Experience</a>
               </li>
-              )}
+              )} */}
               <li className="nav-item">
                 <ThemeSelector />
               </li>

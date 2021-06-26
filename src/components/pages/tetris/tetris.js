@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import Tetris from 'tetris-components';
-import Tetris from '../../../tetris'
-
-import './pages.css';
 import marked from 'marked';
+import Tetris from '../../../tetris';
 
 const TetrisPage = () => {
   const [markdownText, setMarkdownText] = useState('Loading');
