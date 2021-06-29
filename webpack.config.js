@@ -68,6 +68,7 @@ const commonConfig = {
         'src/public/manifest.json',
         'src/public/_redirects',
         'src/public/robots.txt',
+        'src/public/preview.png',
         { from: 'datas/', to: 'datas/' },
       ],
     }),
