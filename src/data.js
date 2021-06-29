@@ -47,7 +47,7 @@ const data = {
     {
       name: 'WEFMS',
       description: "<ul> <li>Developed Portal and RPI script for Wireless Engine Fuel Monitoring System</li> <li>Monitor remotely located engines</li> <li>Portal built with PHP</li> <li><a class='magic-link' href='http://www.wefms.com' target='_blank'>WEFMS demo here</a></li></ul>",
-      link: '/proje',
+      link: '/projects',
       showcase: "<center><img src='../wefms.svg' style='height : 400px; width : 200px' class='card-img-top' alt='image'></center>",
     },
     {

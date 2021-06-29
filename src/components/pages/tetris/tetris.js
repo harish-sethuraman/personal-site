@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import Tetris from 'tetris-components';
 import marked from 'marked';
+import { Helmet } from 'react-helmet';
 import Tetris from '../../../tetris';
 
 const TetrisPage = () => {
@@ -65,6 +66,10 @@ const TetrisPage = () => {
 
   return (
     <main className="content">
+      <Helmet>
+        <title>Tetris Component</title>
+        <meta property="og:description" content="Tetris is a singular component library that provides all the bootstrap components under the same roof" />
+      </Helmet>
       <section id="projects">
         <h1 className="project-name">Tetris</h1>
         <div className="row justify-content-center">

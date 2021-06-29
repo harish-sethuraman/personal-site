@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import marked from 'marked';
+import { Helmet } from 'react-helmet';
 
 const WEFMS = () => {
   const [markdownText, setMarkdownText] = useState('Loading');
@@ -11,6 +12,10 @@ const WEFMS = () => {
   }, []);
   return (
     <main className="content">
+      <Helmet>
+        <title>WEFMS</title>
+        <meta property="og:description" content="Wireless Engine Fuel Monitoring System allows you to control and monitor generators that are present remotely." />
+      </Helmet>
       <section id="projects">
         <div className="row mb-5 justify-content-center">
           <div className="col-10" />

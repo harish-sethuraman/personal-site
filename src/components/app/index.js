@@ -54,6 +54,29 @@ const App = ({ insideBigSur }) => {
                     <WEFMSpage />
                   </Suspense>
                 </Route>
+                <Route path={`${url}/StaticsiteforKLNVidyalaya`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="200" height="250" id="ghost">
+                    <foreignObject width="200" height="250">
+                      <div xmlns="http://www.w3.org/1999/xhtml">
+                        <div id="container">
+                          <h3 className="text-center">Page not Found</h3>
+                          <div id="spooky">
+                            <div id="body">
+                              <div id="eyes" />
+                              <div id="mouth" />
+                              <div id="feet">
+                                <div />
+                                <div />
+                                <div />
+                              </div>
+                            </div>
+                          </div>
+                          <div id="shadow" />
+                        </div>
+                      </div>
+                    </foreignObject>
+                  </svg>
+                </Route>
               </>
             )}
           />

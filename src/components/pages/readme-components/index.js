@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import marked from 'marked';
+import { Helmet } from 'react-helmet';
 
 const ReadmeComponents = () => {
   const [markdownText, setMarkdownText] = useState('Loading');
@@ -11,6 +12,10 @@ const ReadmeComponents = () => {
   }, []);
   return (
     <main className="content">
+      <Helmet>
+        <title>Readme Components</title>
+        <meta property="og:description" content="Components for your markups" />
+      </Helmet>
       <section id="projects">
         <div className="row mb-5 justify-content-center">
           <div className="col-10" />

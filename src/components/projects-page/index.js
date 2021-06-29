@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import Data from '../../data';
 
 const Projects = () => {
@@ -13,6 +14,9 @@ const Projects = () => {
   }, []);
   return (
     <main className="content">
+      <Helmet>
+        <title>Harish&apos;s projects</title>
+      </Helmet>
       <section id="projects">
         <h1 className="project-name">Projects</h1>
         <div
