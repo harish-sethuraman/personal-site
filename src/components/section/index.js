@@ -94,7 +94,7 @@ const Section = ({ insideBigSur }) => {
           <>
             <HeroSection />
             <section id="cloneverse-text" className="col-8">
-              <h1 className="project-name">Clone Verse</h1>
+              <h2 className="project-name">Clone Verse</h2>
               <p className="">
                 Just like MCU and DCEU, this is a Website Clone Universe (WCU).
                 Find things that you have loved using over the years.

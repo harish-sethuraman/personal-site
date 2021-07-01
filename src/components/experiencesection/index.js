@@ -3,10 +3,10 @@ import React, { lazy, Suspense } from 'react';
 const TimeLine = lazy(() => import('../timeline'));
 const ExperienceComponent = ({ positionDetails }) => (
   <section id="experience">
-    <h1 className="project-name">Experience</h1>
+    <h2 className="project-name">Experience</h2>
     <div className="container">
       <div className="spacer" data-height="60" />
-      <Suspense fallback={<h1>Loading component</h1>}>
+      <Suspense fallback={<h2>Loading component</h2>}>
         <TimeLine positionDetails={positionDetails} />
       </Suspense>
 

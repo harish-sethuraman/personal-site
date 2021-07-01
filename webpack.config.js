@@ -69,6 +69,7 @@ const commonConfig = {
         'src/public/_redirects',
         'src/public/robots.txt',
         'src/public/preview.png',
+        'src/public/sitemap.xml',
         { from: 'datas/', to: 'datas/' },
       ],
     }),

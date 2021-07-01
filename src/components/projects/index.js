@@ -3,7 +3,7 @@ import RenderProjects from './renderProjects';
 
 const Projects = ({ projects }) => (
   <section id="projects">
-    <h1 className="project-name">Projects</h1>
+    <h2 className="project-name">Projects</h2>
     {projects.map((data) => (
       <div
         key={Math.random()}
