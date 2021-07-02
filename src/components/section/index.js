@@ -108,7 +108,7 @@ const Section = ({ insideBigSur }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  here
+                  in this link
                 </a>
               </p>
             </section>
