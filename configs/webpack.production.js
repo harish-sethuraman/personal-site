@@ -2,7 +2,7 @@ const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = () => ({
   output: {
-    publicPath: 'https://strek.in/',
+    publicPath: '/',
   },
   mode: 'production',
   plugins: [new WorkboxPlugin.GenerateSW({
