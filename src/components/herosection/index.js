@@ -104,7 +104,7 @@ const HeroSection = () => {
           <div className="slidingVertical">
             <h2>Software Engineer at Freshworks 👨🏻‍💻</h2>
             <h2>Javascript Enthusiast </h2>
-            <h2>Webpack beginner 🥳</h2>
+            <h2>webpack beginner 🥳</h2>
             <h2>C++ guy 😌</h2>
             <h2>React JS fan🎉</h2>
           </div>

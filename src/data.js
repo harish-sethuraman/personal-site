@@ -33,7 +33,7 @@ const data = {
   projects: [
     {
       name: 'Tetris',
-      description: '<ul><li>  UI components for ReactJS that can be grouped together in numerous combinations  </li> <li> Reduces coding effort for large components</li> <li>Written in ReactJS and bundled with Webpack</li><li>Available in npm registry </li></<ul>',
+      description: '<ul><li>  UI components for ReactJS that can be grouped together in numerous combinations  </li> <li> Reduces coding effort for large components</li> <li>Written in ReactJS and bundled with webpack</li><li>Available in npm registry </li></<ul>',
       link: '/projects',
       showcase: "<center><img src='https://readme-components.vercel.app/api?component=linearprogress&amp;skill=REACT&amp;value=60&amp;design=candy&amp;fill=ff69b4' alt='image> <img src='https://readme-components.vercel.app/api?component=experience&amp;company=freshworks&amp;role=software%20Developer%20Intern&amp;duration=7m&amp;location=chennai&amp;fill=93c4fc' alt='image'> <img src='https://readme-components.vercel.app/api?component=logo&amp;fill=black&amp;logo=webpack&amp;svgfill=8ed5fa' alt='image'><img src='https://readme-components.vercel.app/api?component=logo&amp;fill=black&amp;logo=react&amp;animation=spin&amp;svgfill=15d8fe' alt='image'><img width='95%' src='https://readme-components.vercel.app/api?component=stackoverflow&amp;stackoverflowid=8780399&amp;textfill=black&amp;fill=93c4fc&amp;textfill=white' alt='image'></center>",
     },

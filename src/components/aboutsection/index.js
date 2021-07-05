@@ -71,7 +71,7 @@ const AboutSection = ({ myDetails, views, siteEndorsements }) => (
 
                 <div className="skill-item">
                   <div className="skill-info clearfix">
-                    <h4 className="float-left mb-3 mt-3"> Webpack </h4>
+                    <h4 className="float-left mb-3 mt-3"> webpack </h4>
                   </div>
                   <Tetris
                     tetromino={{

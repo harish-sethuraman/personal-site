@@ -16,9 +16,9 @@ const Questionnaire = () => {
           Accept: 'application/json',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ endorsement: 1 }),
+        body: JSON.stringify({ endorsement: Number(status) }),
       };
-      fetch('https://view-counterr.herokuapp.com/api/endorsement', options);
+      fetch('https://strek-view-counter.vercel.app/api/endorsement', options);
     }
     updateItem('liked_site', status);
     toggleAnswerStatus(status);

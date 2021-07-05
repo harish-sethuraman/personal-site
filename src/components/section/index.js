@@ -26,7 +26,7 @@ const Section = ({ insideBigSur }) => {
 
   const fetchMyData = () => {
     setUserData(Data);
-    fetch('https://view-counterr.herokuapp.com/api/getcount')
+    fetch('https://strek-view-counter.vercel.app/api/views')
       .then((view) => view.json())
       .then((values) => {
         setViews(values.views);
