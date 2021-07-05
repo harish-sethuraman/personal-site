@@ -128,7 +128,7 @@ const AboutSection = ({ myDetails, views, siteEndorsements }) => (
             <Facts
               icon="plus"
               heading={siteEndorsements}
-              content="Persons like the site"
+              content="people liked this site"
             />
           </Suspense>
           <div

@@ -12,6 +12,7 @@ const Questionnaire = () => {
     if (status) {
       const options = {
         method: 'POST',
+        mode: 'no-cors',
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
