@@ -480,7 +480,7 @@ section.home .intro span {
   color: #fff;
   font-size: 16px;
 }
-body.dark section.home li a i {
+.dark section.home li a i {
   color: #fff;
 }
 section.home .social-icons li a i {
@@ -538,7 +538,7 @@ section.home.light .social-icons li a:hover {
 .fact-item .icons {
   color: #454360;
 }
-body.dark .fact-item .icons {
+.dark .fact-item .icons {
   color: #fff;
 }
 .blog-item:hover {
@@ -994,7 +994,7 @@ body.dark .fact-item .icons {
     top: 29%;
   }
 }
-body.dark .mouse-wrapper,
+.dark .mouse-wrapper,
 i {
   color: #fff;
 }
@@ -1010,7 +1010,7 @@ i {
   text-align: center;
 }
 
-body.dark .mouse {
+.dark .mouse {
   border: solid 2px #fff;
 }
 .mouse {
@@ -1023,7 +1023,7 @@ body.dark .mouse {
   position: relative;
   width: 20px;
 }
-body.dark .wheel {
+.dark .wheel {
   background: #fff;
 }
 .mouse .wheel {
@@ -1061,74 +1061,74 @@ footer.footer.light {
   border-top: solid 1px rgba(0, 0, 0, 0.05);
 }
 
-body.dark {
+.dark {
   color: #fff;
   background-color: #151722;
 }
-body.dark .section-title {
+.dark .section-title {
   color: #fff;
 }
 
-body.dark blockquote {
+.dark blockquote {
   background: #302f4e !important;
   color: #fff;
 }
-body.dark .dynamic-background {
+.dark .dynamic-background {
   background: #302f4e !important;
   color: #fff;
 }
-body.dark h1,
-body.dark h2,
-body.dark h3,
-body.dark h4,
-body.dark h5,
-body.dark h6 {
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
   color: #fff;
 }
-body.dark .triangle-top:before {
+.dark .triangle-top:before {
   border-bottom-color: #302f4e;
 }
-body.dark .timeline.exp .timeline-container::after,
-body.dark .timeline.edu .timeline-container::after {
+.dark .timeline.exp .timeline-container::after,
+.dark .timeline.edu .timeline-container::after {
   background: #302f4e;
 }
-body.dark .portfolio-filter li {
+.dark .portfolio-filter li {
   color: #fff;
 }
-body.dark a:hover {
+.dark a:hover {
   color: #fff;
 }
-body.dark .portfolio-filter li.current {
+.dark .portfolio-filter li.current {
   color: #ff4c60;
 }
-body.dark .blog-item .details h4.title a {
+.dark .blog-item .details h4.title a {
   color: #fff;
 }
-body.dark .blog-item .details h4.title a:hover {
+.dark .blog-item .details h4.title a:hover {
   color: #ff4c60;
 }
-body.dark .white-popup {
+.dark .white-popup {
   background: #302f4e;
 }
-body.dark footer.footer {
+.dark footer.footer {
   border-top: solid 1px rgba(255, 255, 255, 0.1);
 }
-body.dark .content-blog,
-body.dark .blog-page-section {
+.dark .content-blog,
+.dark .blog-page-section {
   background: #292929;
 }
-body.dark .bg-white {
+.dark .bg-white {
   background-color: #302f4e !important;
 }
-body.dark .blog-standard .meta li a,
-body.dark .blog-standard .title a,
-body.dark .comment-author .fn {
+.dark .blog-standard .meta li a,
+.dark .blog-standard .title a,
+.dark .comment-author .fn {
   color: #fff;
 }
-body.dark .blog-page-section .blog-pagination ul li {
+.dark .blog-page-section .blog-pagination ul li {
   background-color: #302f4e !important;
 }
-body.dark .blog-page-section .blog-single {
+.dark .blog-page-section .blog-single {
   background-color: #302f4e !important;
 }
 .btn {
@@ -1540,7 +1540,7 @@ body.dark .blog-page-section .blog-single {
   box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
 }
 
-body.dark .dynamic-shadow {
+.dark .dynamic-shadow {
   -webkit-box-shadow: 0px 5px 20px 0px rgba(255, 255, 255, 0.01);
   box-shadow: 0px 5px 20px 0px rgba(255, 255, 255, 0.01);
 }
@@ -1783,7 +1783,7 @@ body.dark .dynamic-shadow {
     transform: translateX(-7.5px);
   }
 
-  body.dark .triangle-top-sm:before {
+  .dark .triangle-top-sm:before {
     border-bottom-color: #302f4e;
   }
 }
@@ -1804,7 +1804,7 @@ body.dark .dynamic-shadow {
     top: 20%;
   }
 
-  body.dark .triangle-left-md:before {
+  .dark .triangle-left-md:before {
     border-right-color: #302f4e;
   }
 }
@@ -2054,7 +2054,7 @@ img {
   border-right: 7px solid #fff;
 }
 
-body.dark #timeline .timeline-item .timeline-content.right:before {
+.dark #timeline .timeline-item .timeline-content.right:before {
   border-right: 7px solid #fff;
 }
 .timeline-content h5 {
@@ -2232,7 +2232,7 @@ body {
 .magic-link:hover {
   background-size: 100% 88%;
 }
-body.dark .magic-link {
+.dark .magic-link {
   background-image: linear-gradient(120deg, #804ff5, #ff4cc0);
 }
 

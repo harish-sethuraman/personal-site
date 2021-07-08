@@ -2,13 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { updateItem, getItem } from '../../utils/localStorage';
 
-const ThemeSelector = () => {
+const ThemeSelector = ({ insideBigSur }) => {
   const [theme, toggleTheme] = useState('light');
 
   const changeTheme = (optionalTheme) => {
     toggleTheme(optionalTheme);
     updateItem('theme', optionalTheme);
-    document.getElementsByTagName('body')[0].classList = optionalTheme;
+    if (insideBigSur) {
+      document.getElementsByClassName('portfolio-frame')[0].contentWindow.document.getElementsByClassName('frame-content')[0].classList = `frame-content ${optionalTheme}`;
+    } else {
+      document.getElementById('root').classList = optionalTheme;
+    }
   };
 
   useEffect(() => {
@@ -27,7 +31,7 @@ const ThemeSelector = () => {
     </div>
   );
 };
-const Navbar = () => {
+const Navbar = ({ insideBigSur }) => {
   const location = useLocation();
   const [navStatus, toggleNav] = useState(false);
 
@@ -67,7 +71,7 @@ const Navbar = () => {
               </li>
               )} */}
               <li className="nav-item">
-                <ThemeSelector />
+                <ThemeSelector insideBigSur={insideBigSur} />
               </li>
             </ul>
           </div>

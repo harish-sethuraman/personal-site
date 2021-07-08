@@ -21,7 +21,7 @@ const Projects = () => {
         <h1 className="project-name">Projects</h1>
         <div
           key={Math.random()}
-          className="row mt-5 mb-5 justify-content-center projects"
+          className="row mt-5 pb-5 justify-content-center projects"
         >
           <div className="col-8 rounded dynamic-background">
 

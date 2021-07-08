@@ -80,7 +80,7 @@ const TetrisPage = () => {
             </p>
           </div>
         </div>
-        <div className="row mb-5 justify-content-center">
+        <div className="row pb-5 justify-content-center">
           <div className="col-10">
             <div className="chrome dynamic-background dynamic-shadow">
               <div className="tabs">

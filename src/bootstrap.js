@@ -15,4 +15,4 @@ const Index = () => (
   </>
 );
 
-ReactDOM.render(<Index />, document.getElementsByTagName('body')[0]);
+ReactDOM.render(<Index />, document.getElementById('root'));

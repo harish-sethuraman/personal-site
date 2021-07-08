@@ -25,7 +25,7 @@ const App = ({ insideBigSur }) => {
   return (
     <>
       <Router>
-        <Navbar />
+        <Navbar insideBigSur={insideBigSur} />
         <Switch>
           <Route path="/" exact>
             <Section insideBigSur={insideBigSur} />

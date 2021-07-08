@@ -17,7 +17,7 @@ const ReadmeComponents = () => {
         <meta property="og:description" content="Components for your markups" />
       </Helmet>
       <section id="projects">
-        <div className="row mb-5 justify-content-center">
+        <div className="row pb-5 justify-content-center">
           <div className="col-10" />
           <div className="col-10" dangerouslySetInnerHTML={{ __html: markdownText }} />
         </div>
