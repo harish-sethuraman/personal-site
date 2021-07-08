@@ -46,7 +46,7 @@ const Section = ({ insideBigSur }) => {
       {!insideBigSur && (
         <div
           className="bubbles"
-          style={{ top: '-100vh', position: 'fixed', zIndex: '-1' }}
+          style={{ top: '-100vh', position: 'fixed', zIndex: '0' }}
         >
           <Stars fill="#FF4C60" />
           <Stars fill="#FF4C60" />
