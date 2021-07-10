@@ -32,6 +32,9 @@ const Section = ({ insideBigSur }) => {
         setViews(values.views);
         setSiteEndorsements(values.yes);
         return values;
+      }).catch(() => {
+        setViews('3500+');
+        setSiteEndorsements('80+');
       });
   };
 
