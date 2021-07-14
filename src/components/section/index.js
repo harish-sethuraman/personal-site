@@ -92,7 +92,7 @@ const Section = ({ insideBigSur }) => {
           <Stars fill="#44D7B6" />
         </div>
       )}
-      <main className="content">
+      <main className="content" style={{ zIndex: 2 }}>
         {userData && (
           <>
             <HeroSection />

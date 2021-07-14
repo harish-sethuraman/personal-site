@@ -67,6 +67,7 @@ const commonConfig = {
         'src/public/img',
         'src/public/manifest.json',
         'src/public/_redirects',
+        'src/public/_headers',
         'src/public/robots.txt',
         'src/public/preview.png',
         'src/public/sitemap.xml',
