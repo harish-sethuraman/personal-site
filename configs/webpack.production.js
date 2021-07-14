@@ -6,7 +6,7 @@ module.exports = () => ({
   },
   mode: 'production',
   plugins: [new WorkboxPlugin.GenerateSW({
-    exclude: [/\.(?:png|jpg|jpeg|svg|webp)$/, /_redirects/],
+    exclude: [/\.(?:png|jpg|jpeg|svg|webp)$/, /_redirects/, /_headers/],
     runtimeCaching: [
       {
         urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
