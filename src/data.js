@@ -50,12 +50,12 @@ const data = {
       link: '/projects',
       showcase: "<center><img src='../wefms.svg' style='height : 400px; width : 200px' class='card-img-top' alt='image'></center>",
     },
-    {
-      name: 'Static site for KLN Vidyalaya',
-      description: '<ul> <li>Static site built with HTML, CSS and JS</li> <li>Gained more than 200% views during initial release</li> <li>Currently maintained by their school staffs</li></ul>',
-      link: '/projects',
-      showcase: "<center><img src='https://harishkumar-s-s.firebaseapp.com/assets/img/svgs/vidyalaya.svg' style='height : 400px; width : 200px' class='card-img-top' alt='image'></center>",
-    },
+    // {
+    //   name: 'Static site for KLN Vidyalaya',
+    //   description: '<ul> <li>Static site built with HTML, CSS and JS</li> <li>Gained more than 200% views during initial release</li> <li>Currently maintained by their school staffs</li></ul>',
+    //   link: '/projects',
+    //   showcase: "<center><img src='https://harishkumar-s-s.firebaseapp.com/assets/img/svgs/vidyalaya.svg' style='height : 400px; width : 200px' class='card-img-top' alt='image'></center>",
+    // },
   ],
 };
 

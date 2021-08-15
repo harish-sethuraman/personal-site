@@ -7,11 +7,7 @@ import HeroSection from '../herosection';
 import AboutSection from '../aboutsection';
 import Data from '../../data';
 import MacUI from '../macUI';
-// import ExperienceSection from "../experiencesection";
-// import Projects from "../projects";
-// import Questionnaire from "../questionnaire";
-// import Rocket from '../../assets/rocket.svg';
-// import Mars from '../../assets/mars.svg';
+import { randomNumber } from './randomHelpers';
 
 const Projects = lazy(() => import('../projects'));
 const Questionnaire = lazy(() => import('../questionnaire'));
@@ -43,59 +39,89 @@ const Section = ({ insideBigSur }) => {
   }, []);
   return (
     <>
-      {/* <img src={Rocket} alt="rocket" className="rocket" /> */}
-      {/* <img src={Mars} alt="mars" className="mars" /> */}
-
       {!insideBigSur && (
-        <div
-          className="bubbles"
-          style={{ top: '-100vh', position: 'fixed', zIndex: '0' }}
-        >
-          <Stars fill="#FF4C60" />
-          <Stars fill="#FF4C60" />
-          <Stars fill="#FF4C60" />
-          <Stars fill="#FF4C60" />
-
-          <Stars fill="#FFD15C" />
-          <Stars fill="#FFD15C" />
-          <Stars fill="#FFD15C" />
-          <Stars fill="#FFD15C" />
-
-          <Stars fill="#6C6CE5" />
-          <Stars fill="#6C6CE5" />
-          <Stars fill="#6C6CE5" />
-          <Stars fill="#6C6CE5" />
-
-          <Stars fill="#44D7B6" />
-          <Stars fill="#44D7B6" />
-          <Stars fill="#44D7B6" />
-          <Stars fill="#44D7B6" />
-
-          <Stars fill="#FF4C60" />
-          <Stars fill="#FF4C60" />
-          <Stars fill="#FF4C60" />
-          <Stars fill="#FF4C60" />
-
-          <Stars fill="#FFD15C" />
-          <Stars fill="#FFD15C" />
-          <Stars fill="#FFD15C" />
-          <Stars fill="#FFD15C" />
-
-          <Stars fill="#6C6CE5" />
-          <Stars fill="#6C6CE5" />
-          <Stars fill="#6C6CE5" />
-          <Stars fill="#6C6CE5" />
-
-          <Stars fill="#44D7B6" />
-          <Stars fill="#44D7B6" />
-          <Stars fill="#44D7B6" />
-          <Stars fill="#44D7B6" />
-        </div>
+      <div
+        className="bubbles"
+        style={{ top: '-100vh', position: 'fixed', zIndex: '0' }}
+      >
+        <Stars fill="#FF4C60" />
+        <Stars fill="#FF4C60" />
+        <Stars fill="#FF4C60" />
+        <Stars fill="#FF4C60" />
+        <Stars fill="#FFD15C" />
+        <Stars fill="#FFD15C" />
+        <Stars fill="#FFD15C" />
+        <Stars fill="#FFD15C" />
+        <Stars fill="#6C6CE5" />
+        <Stars fill="#6C6CE5" />
+        <Stars fill="#6C6CE5" />
+        <Stars fill="#6C6CE5" />
+        <Stars fill="#44D7B6" />
+        <Stars fill="#44D7B6" />
+        <Stars fill="#44D7B6" />
+        <Stars fill="#44D7B6" />
+        <Stars fill="#FF4C60" />
+        <Stars fill="#FF4C60" />
+        <Stars fill="#FF4C60" />
+        <Stars fill="#FF4C60" />
+        <Stars fill="#FFD15C" />
+        <Stars fill="#FFD15C" />
+        <Stars fill="#FFD15C" />
+        <Stars fill="#FFD15C" />
+        <Stars fill="#6C6CE5" />
+        <Stars fill="#6C6CE5" />
+        <Stars fill="#6C6CE5" />
+        <Stars fill="#6C6CE5" />
+        <Stars fill="#44D7B6" />
+        <Stars fill="#44D7B6" />
+        <Stars fill="#44D7B6" />
+        <Stars fill="#44D7B6" />
+      </div>
       )}
+      <div className="meteorscontainer">
+        <div className="meteors movingmeteors" />
+        <div className="meteors movingmeteors" />
+        <div className="meteors movingmeteors" />
+        <div className="meteors movingmeteors" />
+        <div className="meteors movingmeteors" />
+        <div className="meteors movingmeteors" />
+        <div className="meteors movingmeteors" />
+        <div className="meteors movingmeteors" />
+
+        {Array.from({ length: 40 }, () => Math.floor(Math.random() * 40)).map(
+          (a) => {
+            console.log(a);
+            return (
+              <div
+                className="staticmeteor meteors"
+                key={Math.random() * 40}
+                style={{
+                  top: randomNumber(0, window.innerHeight),
+                  right: randomNumber(0, window.innerWidth),
+                }}
+              />
+            );
+          },
+        )}
+      </div>
+
       <main className="content" style={{ zIndex: 2 }}>
         {userData && (
           <>
             <HeroSection />
+            <Suspense
+              fallback={(
+                <center>
+                  <h1>loading the component</h1>
+                </center>
+              )}
+            >
+              <AboutSection
+                myDetails={userData}
+                views={views}
+                siteEndorsements={siteEndorsements}
+              />
+            </Suspense>
             <section id="cloneverse-text" className="col-8">
               <h2 className="project-name">Clone Verse</h2>
               <p className="">
@@ -116,20 +142,6 @@ const Section = ({ insideBigSur }) => {
               </p>
             </section>
             <section id="cloneverse">{!insideBigSur && <MacUI />}</section>
-            <Suspense
-              fallback={(
-                <center>
-                  <h1>loading the component</h1>
-                </center>
-              )}
-            >
-              <AboutSection
-                myDetails={userData}
-                views={views}
-                siteEndorsements={siteEndorsements}
-              />
-            </Suspense>
-
             <Suspense
               fallback={(
                 <center>

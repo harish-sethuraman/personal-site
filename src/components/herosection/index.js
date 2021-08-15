@@ -50,8 +50,8 @@ const HeroSection = () => {
           [0, 4000],
           [0, 'Math.random() * 1000'],
           {
-            cssFn(val) {
-              return `rotateX(${val % 360}deg)`;
+            cssFn() {
+              return 'rotateX(0deg)';
             },
           },
         ],
@@ -98,7 +98,14 @@ const HeroSection = () => {
           <h1 className="animate__animated animate__zoomIn hero-heading">
             Hey 👋 ! I’m
             {' '}
-            <a className="magic-link" href="https://github.com/harish-sethuraman" target="_blank" rel="noreferrer">Harish Kumar</a>
+            <a
+              className="magic-link"
+              href="https://github.com/harish-sethuraman"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Harish Kumar
+            </a>
           </h1>
 
           <div className="slidingVertical">
@@ -132,7 +139,7 @@ const HeroSection = () => {
               href="mailto:ssharishkumargmail.com?subject=Pinging from website"
               className="btn btn-default"
             >
-              Hire me
+              Ping me
             </a>
           </div>
         </div>

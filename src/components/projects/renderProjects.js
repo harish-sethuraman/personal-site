@@ -80,18 +80,18 @@ const RenderProjects = (name) => {
           </LazyLoad>
         </center>
       );
-    case 'Static site for KLN Vidyalaya':
-      return (
-        <center>
-          <LazyLoad width={200} height={400} debounce={false} offset={10000}>
-            <ImageLoader
-              src="https://harishkumar-s-s.firebaseapp.com/assets/img/svgs/vidyalaya.svg"
-              class="card-img-top"
-              alt="image"
-            />
-          </LazyLoad>
-        </center>
-      );
+    // case 'Static site for KLN Vidyalaya':
+    //   return (
+    //     <center>
+    //       <LazyLoad width={200} height={400} debounce={false} offset={10000}>
+    //         <ImageLoader
+    //           src="https://harishkumar-s-s.firebaseapp.com/assets/img/svgs/vidyalaya.svg"
+    //           class="card-img-top"
+    //           alt="image"
+    //         />
+    //       </LazyLoad>
+    //     </center>
+    //   );
     default:
       return <h1>Not found</h1>;
   }
