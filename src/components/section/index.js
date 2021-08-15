@@ -89,19 +89,16 @@ const Section = ({ insideBigSur }) => {
         <div className="meteors movingmeteors" />
 
         {Array.from({ length: 40 }, () => Math.floor(Math.random() * 40)).map(
-          (a) => {
-            console.log(a);
-            return (
-              <div
-                className="staticmeteor meteors"
-                key={Math.random() * 40}
-                style={{
-                  top: randomNumber(0, window.innerHeight),
-                  right: randomNumber(0, window.innerWidth),
-                }}
-              />
-            );
-          },
+          () => (
+            <div
+              className="staticmeteor meteors"
+              key={Math.random() * 40}
+              style={{
+                top: randomNumber(0, window.innerHeight),
+                right: randomNumber(0, window.innerWidth),
+              }}
+            />
+          ),
         )}
       </div>
 
