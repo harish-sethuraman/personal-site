@@ -10,10 +10,10 @@ html {
   margin: 0 !important;
   /* overflow: auto !important; */
 }
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
   display: none;
 }
-.dark::-webkit-scrollbar{
+.dark::-webkit-scrollbar {
   display: none;
 }
 body {
@@ -385,8 +385,9 @@ pre {
 }
 
 .navbar-header {
-  position: relative;
-  z-index: 2;
+  z-index: 999;
+  position: sticky;
+  top: 0;
   background: #151722;
   padding: 20px 0;
   border-bottom: solid 1px rgba(255, 255, 255, 0.1);
@@ -2542,15 +2543,24 @@ body {
 .dark .bubbles {
   display: none;
 }
-
-.meteorscontainer{
+p {
+  transition: unset;
+}
+.meteorscontainer {
+  overflow: hidden;
   position: absolute;
   height: 100vh;
   width: 100vw;
 }
-p{    transition: all 0.1s ease;
+
+.dark section.home .social-icons li a i {
+  color: white;
 }
 
-.dark section.home .social-icons li a i{
-  color :white;
+.LazyLoad {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#projects {
+  height: calc(100vh - 68px);
 }

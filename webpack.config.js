@@ -59,9 +59,6 @@ const commonConfig = {
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: [path.join(__dirname, 'docs/**/*')],
     }),
-    new HtmlWebpackPlugin({
-      template: './src/public/index.html',
-    }),
     new CopyWebpackPlugin({
       patterns: [
         'src/public/img',

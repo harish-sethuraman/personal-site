@@ -11,7 +11,7 @@ const RenderProjects = (name) => {
         <center>
           <LazyLoad debounce={false} offset={10000}>
             <ImageLoader
-              src="https://readme-components.vercel.app/api?component=experience&amp;company=freshworks&amp;role=software%20Developer%20Intern&amp;duration=7m&amp;location=chennai&amp;fill=93c4fc"
+              src="https://readme-components.vercel.app/api?component=experience&amp;company=freshworks&amp;role=SWE%0AFrontend&amp;duration=1.5y&amp;location=chennai&amp;fill=93c4fc"
               alt="image"
             />
           </LazyLoad>

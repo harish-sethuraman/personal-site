@@ -16,7 +16,7 @@ const WEFMS = () => {
         <title>WEFMS</title>
         <meta property="og:description" content="Wireless Engine Fuel Monitoring System allows you to control and monitor generators that are present remotely." />
       </Helmet>
-      <section id="projects">
+      <section id="project">
         <div className="row pb-5 justify-content-center">
           <div className="col-10" />
           <div className="col-10" dangerouslySetInnerHTML={{ __html: markdownText }} />

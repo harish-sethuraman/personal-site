@@ -70,7 +70,7 @@ const TetrisPage = () => {
         <title>Tetris Component</title>
         <meta property="og:description" content="Tetris is a singular component library that provides all the bootstrap components under the same roof" />
       </Helmet>
-      <section id="projects">
+      <section id="project">
         <h1 className="project-name">Tetris</h1>
         <div className="row justify-content-center">
           <div className="col-10">

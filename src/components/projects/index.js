@@ -2,7 +2,7 @@ import React from 'react';
 import RenderProjects from './renderProjects';
 
 const Projects = ({ projects }) => (
-  <section id="projects">
+  <section id="project">
     <h2 className="project-name">Projects</h2>
     {projects.map((data) => (
       <div

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import lax from 'lax.js';
 import LazyLoad from 'react-lazy-load';
 import ImageLoader from '../image-loader';
-
+import Me from '../../assets/me.png'
 const HeroSection = () => {
   useEffect(() => {
     // Setup lax
@@ -87,7 +87,7 @@ const HeroSection = () => {
             <div className="intro-image">
               <LazyLoad width={150} height={150} debounce={false} offset={400}>
                 <ImageLoader
-                  src="https://avatars.githubusercontent.com/u/32865581?s=460&u=c4feab5026e0578e9e899d66ec04fbbeb2991b7a&v=4"
+                  src={Me}
                   alt="Strek"
                   className="intro-image mb-4"
                 />

@@ -1,17 +1,13 @@
 import ReactDOM from 'react-dom';
-import React, { lazy, Suspense } from 'react';
-// import App from './components/app'
-import './css/animate.css';
+import React from 'react';
 
-import PageLoader from './components/loader';
+import './css/dummy.css';
 
-const App = lazy(() => import('./components/app'));
+import App from './components/app';
 
 const Index = () => (
   <>
-    <Suspense fallback={<PageLoader />}>
-      <App />
-    </Suspense>
+    <App />
   </>
 );
 
