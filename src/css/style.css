@@ -386,11 +386,12 @@ pre {
 
 .navbar-header {
   z-index: 999;
-  position: sticky;
+  position: fixed;
   top: 0;
   background: #151722;
   padding: 20px 0;
-  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid hsla(0,0%,100%,.1);
+  width: 100%;
 }
 .navbar-header .navbar {
   padding: 0;

@@ -7,13 +7,28 @@
     <meta name="theme-color" content="#292929" />
 
     <title>Harish Kumar</title>
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-RNQF7PPZRP"></script>
+    <script
+      defer
+      src="https://www.googletagmanager.com/gtag/js?id=G-RNQF7PPZRP"
+    ></script>
+
+    <!-- Google Analytics -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-  
-      gtag('config', 'G-RNQF7PPZRP');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-RNQF7PPZRP");
+    </script>
+    <!-- Service Worker -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
     </script>
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -81,7 +96,6 @@
         height: 100%;
       }
       body {
-        height: 100%;
         width: 100%;
         margin: 0;
         padding: 0;
@@ -122,13 +136,13 @@
         margin-left: 80px;
         animation: shine infinite 1.5s;
       }
-      @media (min-width: 1200px){
-        .left-shimmers{
+      @media (min-width: 1200px) {
+        .left-shimmers {
           margin-right: 183px;
         }
       }
-      @media screen and (max-width : 1200px ) and ( min-width: 1366px){
-        .left-shimmers{
+      @media screen and (max-width: 1200px) and (min-width: 1366px) {
+        .left-shimmers {
           margin-right: 432px;
         }
       }
@@ -165,7 +179,7 @@
         border-radius: 50%;
         animation: shine infinite 1.5s;
       }
-      .name-holder{
+      .name-holder {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -174,7 +188,7 @@
       .name-shimmer {
         font-size: 36px;
       }
-      .name-shimmer:nth-child(1){
+      .name-shimmer:nth-child(1) {
         margin-right: 5px;
       }
       .icons-shimmer {
@@ -198,9 +212,9 @@
         font-weight: 700;
         outline: none;
         border: none;
-        margin-top:24px;
+        margin-top: 24px;
       }
-      .h2-shimmer{
+      .h2-shimmer {
         font-weight: 500;
         font-size: 28px;
       }
@@ -232,7 +246,7 @@
         <div class="body-shimmer">
           <div class="pic-shimmer"></div>
           <div class="name-holder">
-            <h1 class="name-shimmer"> Hey 👋 ! Im</h1>
+            <h1 class="name-shimmer">Hey 👋 ! Im</h1>
             <h1 class="name-shimmer">loading ;)</h1>
           </div>
 
@@ -247,6 +261,5 @@
       </div>
     </div>
     <noscript>Please enable JavaScript to see the site</noscript>
-   
   </body>
 </html>
