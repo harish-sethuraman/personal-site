@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = () => ({
   output: {
-    publicPath: 'https://strek.in/',
+    publicPath: 'https://strek.netlify.app/',
   },
   mode: 'production',
   plugins: [
